@@ -1,4 +1,6 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Foldit:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 body {
   margin: 0;
 }
@@ -6,12 +8,217 @@ body {
 
 /* Header */
 
-.header{
+.header {
   width: 100%;
-  padding: 0px;
+  display: flex;
   border-bottom: none;
   z-index: 9 !important;
   background: rgba(6, 31, 36, 0.9);
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
-  height: 110px;
+  padding: 1.75rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.logo-div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 3%;
+}
+
+.logo {
+  height: 35px;
+}
+
+.logo-name {
+  text-decoration: none;
+  white-space: nowranavbar-collapsep;
+  font-size: 32px;
+  color: #fff;
+  font-weight: 600;
+  font-family: 'Fredericka the Great', cursive;
+
+
+}
+
+.header-div-pages {
+  justify-content: flex-end;
+  display: flex;
+  margin-right: 3%;
+}
+
+.header-pages-text {
+  display: flex;
+  color: #fff;
+  gap: 2.25rem;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: capitalize;
+  opacity: .8;
+}
+
+.header-content {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  transform-origin: center;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backface-visibility: hidden;
+  will-change: transform;
+  color: lightgrey;
+
+}
+
+.header-content:hover {
+  transform: scale(1.1);
+  color: #fff;
+
+}
+
+.header-hire {
+  padding: 13px 35px;
+  font-size: 17px;
+  line-height: 28px;
+  font-weight: 500;
+  transition: 0.3s ease-in;
+  border-radius: 40px;
+  border: none;
+  color: #ffffff;
+  background: linear-gradient(to bottom, green, white);
+  background-position: 50% 0%;
+  background-size: 100% 200%;
+
+}
+
+.header-hire:hover {
+  background-color: #fff;
+  color: black;
+  opacity: 1;
+  background-position: 50% 100%;
+
+}
+
+.header-hire:active {
+  background-color: gray;
+  transition: 0.1s ease-in;
+  color: green;
+}
+
+
+
+/* Banner */
+.Banner {
+  width: 100%;
+  background: linear-gradient(to bottom, white, black);
+  gap: 2.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.banner-div {
+  max-width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.banner-name-skills {}
+
+.banner-name {
+  color: #fff;
+  font-size: xx-large;
+  padding-top: 20%;
+}
+
+.banner-skills {
+  font-size: 100px;
+  line-height: 100px;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 700;
+  color: transparent;
+  background: none;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #fff;
+
+}
+
+.skills {
+  min-height: 150px;
+}
+.banner-des{
+  max-width: 70%;
+  color: rgb(255, 255, 255);
+  color: #fff;
+    margin: 0;
+    padding: 0;
+    font-size: 19px;
+    line-height: 28px;
+    margin-bottom: 2%;
+    font-family: 'Dancing Script', cursive;
+} 
+.banner-btn {
+  padding: 13px 35px;
+  font-size: 17px;
+  line-height: 28px;
+  font-weight: 500;
+  margin-bottom: 2%;
+  margin-right: 1%;
+  transition: 0.3s ease-in,background-color .9s;
+  border-radius: 40px;
+  border: none;
+  color: #ffffff;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.banner-btn:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #dbdbea;
+  border-radius: 30px;
+  z-index: 1;
+}
+
+.banner-btn:after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s 0.2s;
+  border-radius: 30px;
+  z-index: -2;
+}
+
+.banner-btn:hover {
+  color: #21d827;
+  background: white;
+  
+}
+
+.banner-btn:hover:after {
+  transition: all 0.3s;
+  left: 0;
+  top: 0;
+  border-radius: 30px;
+}
+
+.banner-btn__inner {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background: #fe1818;
+  z-index: -1;
 }

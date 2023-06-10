@@ -22,7 +22,12 @@ module.exports = {
       },
       fontFamily: {
         titleFont: "Roboto",
-        bodyFont: "Poppins"
+        bodyFont: "Poppins",
+        heading: ["Bodoni Moda, serif"],
+        
+
+        
+        
       },
       colors: {
         amazon_blue: "#131921",
