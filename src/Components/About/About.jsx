@@ -4,7 +4,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import ArchitectureIcon from '@mui/icons-material/Architecture';
-import { Biography, Service } from "../../src/Assets"
+import { Biography, Service } from "../../Assets"
 
 
 function About() {
