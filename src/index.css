@@ -111,10 +111,11 @@ body {
 /* Banner */
 .Banner {
   width: 100%;
-  background: linear-gradient(to bottom, white, black);
+  background: linear-gradient(to bottom, grey, black);
   gap: 2.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
+ 
 }
 
 .banner-div {
@@ -128,7 +129,7 @@ body {
 .banner-name {
   color: #fff;
   font-size: xx-large;
-  padding-top: 20%;
+  padding-top: 7%;
 }
 
 .banner-skills {
@@ -221,4 +222,85 @@ body {
   border-radius: 30px;
   background: #fe1818;
   z-index: -1;
+}
+
+
+/* About Section */
+
+.about{
+  width: 100%;
+  margin-top: 0%;
+  /* background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(95, 95, 95)); */
+  
+}
+.about-div {
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+.about-image{
+width: 40%;
+margin-right: 2rem;
+min-width: 40%;
+}
+.about-bio{
+width: 60%;
+max-width: 60%;
+}
+.about-bio-text{
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: inline-block;
+  color: grey;
+  position: relative;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+}
+.about-quote-text{
+  font-size: 38px;
+    line-height: 48px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #404044;
+    font-family: Lucida Console;
+}
+.about-text1{
+  font-size: x-large;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-family: Noto;
+}
+.my-info {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 3rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 30px;
+  margin-top: 30px;
+}
+.single-info{
+  font-size: 18px;
+    line-height: 28px;
+    color: #717171;
+    
+}
+
+.about-social-media{
+  display: flex;
+  margin-top: 1rem;
+  gap: 1rem;
+  font-size: larger;
+}
+.social-media{
+  font-size: xx-larger;
+  transition: transform 0.3s;
+  transform-style: preserve-3d;
+  perspective: 500px;
+
+}
+.social-media:hover{
+  transform: translateZ(20px) scale(1.2);
+ 
 }

@@ -43,7 +43,7 @@ function Banner() {
             </p>
             <div>
               <button className='banner-btn'>Hire Me</button>
-              <button className='banner-btn'>Download CV</button>
+              <button className='banner-btn'>My Portfolio</button>
             </div>
             
           </div>
