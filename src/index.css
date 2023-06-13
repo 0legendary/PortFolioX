@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Foldit:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
 body {
   margin: 0;
 }
@@ -115,7 +116,7 @@ body {
   gap: 2.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
- 
+
 }
 
 .banner-div {
@@ -147,17 +148,19 @@ body {
 .skills {
   min-height: 150px;
 }
-.banner-des{
+
+.banner-des {
   max-width: 70%;
   color: rgb(255, 255, 255);
   color: #fff;
-    margin: 0;
-    padding: 0;
-    font-size: 19px;
-    line-height: 28px;
-    margin-bottom: 2%;
-    font-family: 'Dancing Script', cursive;
-} 
+  margin: 0;
+  padding: 0;
+  font-size: 19px;
+  line-height: 28px;
+  margin-bottom: 2%;
+  font-family: 'Dancing Script', cursive;
+}
+
 .banner-btn {
   padding: 13px 35px;
   font-size: 17px;
@@ -165,7 +168,7 @@ body {
   font-weight: 500;
   margin-bottom: 2%;
   margin-right: 1%;
-  transition: 0.3s ease-in,background-color .9s;
+  transition: 0.3s ease-in, background-color .9s;
   border-radius: 40px;
   border: none;
   color: #ffffff;
@@ -202,7 +205,7 @@ body {
 .banner-btn:hover {
   color: #21d827;
   background: white;
-  
+
 }
 
 .banner-btn:hover:after {
@@ -227,28 +230,32 @@ body {
 
 /* About Section */
 
-.about{
+.about {
   width: 100%;
   margin-top: 0%;
   /* background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(95, 95, 95)); */
-  
+
 }
+
 .about-div {
   max-width: 60%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
 }
-.about-image{
-width: 40%;
-margin-right: 2rem;
-min-width: 40%;
+
+.about-image {
+  width: 40%;
+  margin-right: 2rem;
+  min-width: 40%;
 }
-.about-bio{
-width: 60%;
-max-width: 60%;
+
+.about-bio {
+  width: 60%;
+  max-width: 60%;
 }
-.about-bio-text{
+
+.about-bio-text {
   font-size: 20px;
   font-weight: 500;
   text-transform: uppercase;
@@ -258,20 +265,23 @@ max-width: 60%;
   letter-spacing: 1px;
   margin-top: 1rem;
 }
-.about-quote-text{
+
+.about-quote-text {
   font-size: 38px;
-    line-height: 48px;
-    font-weight: 600;
-    text-transform: capitalize;
-    color: #404044;
-    font-family: Lucida Console;
+  line-height: 48px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #404044;
+  font-family: Lucida Console;
 }
-.about-text1{
+
+.about-text1 {
   font-size: x-large;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   font-family: 'Dancing Script', cursive;
 }
+
 .my-info {
   display: grid;
   grid-template-columns: 1fr 3fr;
@@ -280,63 +290,71 @@ max-width: 60%;
   padding-top: 30px;
   margin-top: 30px;
 }
-.single-info{
+
+.single-info {
   font-size: 18px;
-    line-height: 28px;
-    color: #717171;
-    
+  line-height: 28px;
+  color: #717171;
+
 }
 
-.about-social-media{
+.about-social-media {
   display: flex;
   margin-top: 1rem;
   gap: 1rem;
   font-size: larger;
 }
-.social-media{
+
+.social-media {
   font-size: xx-larger;
   transition: transform 0.3s;
   transform-style: preserve-3d;
   perspective: 500px;
 
 }
-.social-media:hover{
+
+.social-media:hover {
   transform: translateZ(20px) scale(1.2);
- 
+
 }
 
 /* Service Section */
-.service{
+.service {
   width: 100%;
   background: linear-gradient(to bottom, black, grey);
 
 }
-.service-main-div{
+
+.service-main-div {
   max-width: 70%;
   margin-left: auto;
   margin-right: auto;
 }
-.service-main-div1{
+
+.service-main-div1 {
   display: flex;
   align-items: center;
   justify-content: center;
   color: #717171;
-  
+
 }
-.service-heading{
+
+.service-heading {
   font-size: x-large;
   font-weight: 400;
   font-family: 'Courier New', Courier, monospace;
   margin-top: 1.5rem;
   color: white;
 }
-.service-items{
+
+.service-items {
   display: flex;
   gap: 1rem;
   margin-top: 1.5rem;
   margin-bottom: 2rem;
-  
+
 }
+
 .service-box {
   background: linear-gradient(to bottom, grey, white);
   padding: 40px;
@@ -345,18 +363,20 @@ max-width: 60%;
   border-radius: 15px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
   transition: transform 0.5s;
-  
+
 }
 
 .service-box:hover {
   transform: scale(1.1);
 
 }
-.service-box-heading{
+
+.service-box-heading {
   font-size: x-large;
   margin-bottom: 1rem;
 }
-.service-more{
+
+.service-more {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -364,34 +384,39 @@ max-width: 60%;
   color: black;
   font-family: 'Courier New', Courier, monospace;
 }
+
 .service-more:hover {
   cursor: pointer;
 
 }
-.next-page{
+
+.next-page {
   transition: transform 0.5s;
 }
-.next-page:hover{
+
+.next-page:hover {
   transform: scale(1.1);
-  
+
 }
 
 
 /* Skill Section */
 
-.skill-section{
+.skill-section {
   width: 100%;
   background: rgb(0, 0, 0);
 }
-.skill-main-div{
+
+.skill-main-div {
   max-width: 80%;
   margin: auto;
-  
+
 }
-.skill-heading{
+
+.skill-heading {
   font-size: x-large;
   color: rgb(255, 255, 255);
-  font-family:'Times New Roman', Times, serif ;
+  font-family: 'Times New Roman', Times, serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -399,15 +424,17 @@ max-width: 60%;
   padding-bottom: 1rem;
 }
 
-.progress-container{
+.progress-container {
   display: flex;
-  
+
 }
-.progress-bar{
+
+.progress-bar {
   flex-basis: 50%;
   padding-bottom: 5rem;
 }
-.progress-content{
+
+.progress-content {
   color: white;
   font-size: large;
   padding: 2%;
@@ -415,7 +442,7 @@ max-width: 60%;
 }
 
 .progress {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   justify-content: flex-start;
   border-radius: 100px;
   align-items: center;
@@ -454,38 +481,207 @@ max-width: 60%;
 
 
 /* Extra Activities */
-.extra-activities{
+.extra-activities {
   width: 100%;
 }
-.extra-activity-container{
+
+.extra-activity-container {
   max-width: 80%;
   margin: auto;
   padding-bottom: 3rem;
-  
+
 }
-.activities{
+
+.activities {
   font-size: x-large;
   font-family: Arial, Helvetica, sans-serif;
   padding-left: 2rem;
-    padding-top: 3rem;
-    padding-bottom: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
 }
-.extra-act-div{
+
+.extra-act-div {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
-.extra-activity-prop{
+
+.extra-activity-prop {
   display: flex;
   align-items: center;
   flex-basis: 33.33%;
   padding: 10px;
   box-sizing: border-box;
-  
+
 }
-.extra-act-img{
+
+.extra-act-img {
   height: 5rem;
 }
-.extra-act-des{
+
+.extra-act-des {
   padding-left: 1rem;
 }
+
+
+/* Working Details Section */
+
+.working-details {
+  width: 100%;
+  background: #000000;
+
+
+}
+
+.working-container {
+  max-width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+
+}
+
+
+.container {
+  position: relative;
+  width: 900px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.container .card {
+  position: relative;
+  width: 250px;
+  background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  border-radius: 4px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.container .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+}
+
+.container .card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, .03);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.percent {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 50px #000;
+  background: #222;
+  z-index: 1000;
+}
+
+.percent .num {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.percent .num h2 {
+  color: #777;
+  font-weight: 700;
+  font-size: 40px;
+  transition: 0.5s;
+}
+
+.card:hover .percent .num h2 {
+  color: #fff;
+  font-size: 60px;
+}
+
+.percent .num h2 span {
+  color: #777;
+  font-size: 24px;
+  transition: 0.5s;
+}
+
+.card:hover .percent .num h2 span {
+  color: #fff;
+}
+
+.text {
+  position: relative;
+  color: #777;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.card:hover .text {
+  color: #fff;
+}
+
+svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  z-index: 1000;
+}
+
+svg circle {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #191919;
+  stroke-width: 10;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+}
+
+svg circle:nth-child(2) {
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+}
+
+.container:nth-child(1) .card:nth-child(1) .box .percent svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 70) / 100);
+  stroke: #00ff43;
+}
+
+.container:nth-child(2) .card:nth-child(1) .box .percent svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 82) / 100);
+  stroke: #00ff43;
+}
+
+.container:nth-child(3) .card:nth-child(1) .box .percent svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 72) / 100);
+  stroke: #00ff43;
+}
+
+.container:nth-child(4) .card:nth-child(1) .box .percent svg circle:nth-child(2) {
+  stroke-dashoffset: calc(440 - (440 * 60) / 100);
+  stroke: #00ff43;
+}
+
