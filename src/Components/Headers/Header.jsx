@@ -1,5 +1,5 @@
 import React from 'react'
-import { logo } from "../../src/Assets"
+import { logo } from "../../Assets"
 
 function Header() {
   return (

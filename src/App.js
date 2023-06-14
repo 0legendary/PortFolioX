@@ -1,8 +1,8 @@
 import About from "./Components/About/About";
 import Projects from "./Components/About/Projects";
 import Skills from "./Components/About/Skills";
-import Banner from "./Components/Banner";
-import Header from "./Components/Header"
+import Banner from "./Components/Headers/Banner";
+import Header from "./Components/Headers/Header"
 
 function App() {
   return (

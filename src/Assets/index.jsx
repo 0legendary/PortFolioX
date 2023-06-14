@@ -4,6 +4,7 @@ import Service from "./png/icons/service-icon.png"
 import BrototypeLogo from "./png/icons/actvity-logo.png"
 import CompanyLogo from "./png/icons/company-logo.png"
 import ExpoLogo from "./png/icons/expo-icon.png"
+import PortFolio from "./png/Projects/html-website.png"
 export{
     logo,
     Biography,
@@ -11,4 +12,5 @@ export{
     BrototypeLogo,
     CompanyLogo,
     ExpoLogo,
+    PortFolio
 };

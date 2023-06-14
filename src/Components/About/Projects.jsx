@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { projectDescription } from '../../Constants';
+
 function Projects() {
     return (
         <div>
@@ -79,17 +81,36 @@ function Projects() {
 
 
             <section className='projects'>
-                <div>
-                    <h1>Projects</h1>
-                </div>
-                <div>
-                    <div>
-                        <h1>Amazone-Clone</h1>
+                <div className='project-container'>
+                    <div className='project-heading'>
+                        <h1>Projects</h1>
                     </div>
-                    <div>
+                    <div className='card-container'>
+                        {
+                            projectDescription.map((item) => {
+                                return (
+                                    <div class="card" key={item._id}>
+                                        <div class="card-front">
 
+                                            <img src={item.img} alt={item.alt} />
+                                        </div>
+                                        <div class="card-back">
+                                            <ul>
+                                                <li>{item.des1}</li>
+                                                <li>{item.des2}</li>
+                                                <li>{item.des1}</li>
+                                                <li>{item.des2}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
+
+
                 </div>
+
             </section>
         </div>
     )
