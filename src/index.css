@@ -14,11 +14,18 @@ body {
   display: flex;
   border-bottom: none;
   z-index: 9 !important;
-  background: rgba(6, 31, 36, 0.9);
+  background:transparent;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
   padding: 1.75rem 1rem;
   align-items: center;
   justify-content: space-between;
+  transition: background-color 0.5s ease-in-out;
+  position: fixed;
+ 
+}
+
+.header.scrolled {
+  background: rgba(6, 31, 36, 0.9);
 
 }
 
@@ -30,19 +37,27 @@ body {
 }
 
 .logo {
-  height: 35px;
+  height: 25px;
+  margin-right: 7px;
+  margin-bottom: 4px;
 }
-
 .logo-name {
   text-decoration: none;
   white-space: nowranavbar-collapsep;
   font-size: 32px;
-  color: #fff;
+  background: linear-gradient(to top, #636363, black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 600;
   font-family: 'Fredericka the Great', cursive;
-
-
+  transition: background-color 5s ease-in-out;
 }
+.logo-name.scrolled{
+  background: linear-gradient(to top, #000000, rgb(255, 255, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 
 .header-div-pages {
   justify-content: flex-end;
@@ -68,7 +83,7 @@ body {
   transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   backface-visibility: hidden;
   will-change: transform;
-  color: lightgrey;
+  color: rgb(0, 0, 0);
 
 }
 
@@ -76,6 +91,16 @@ body {
   transform: scale(1.1);
   color: #fff;
 
+}
+.header-content.scrolled{
+  color: lightgray;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backface-visibility: hidden;
+  will-change: transform;
+}
+.header-content.scrolled:hover{
+  color: rgb(255, 255, 255);
+  transform: scale(1.1);
 }
 
 .header-hire {
@@ -130,7 +155,7 @@ body {
 .banner-name {
   color: #fff;
   font-size: xx-large;
-  padding-top: 7%;
+  padding-top: 10%;
 }
 
 .banner-skills {
@@ -530,7 +555,8 @@ body {
 .working-details {
   width: 100%;
   background: #000000;
-
+  z-index: 1;
+  position: relative;
 
 }
 
@@ -659,16 +685,19 @@ svg circle {
   stroke-width: 10;
   stroke-linecap: round;
   transform: translate(5px, 5px);
+  
 }
 
 svg circle:nth-child(2) {
   stroke-dasharray: 440;
   stroke-dashoffset: 440;
+  
 }
 
 .container:nth-child(1) .card:nth-child(1) .box .percent svg circle:nth-child(2) {
   stroke-dashoffset: calc(440 - (440 * 70) / 100);
   stroke: #00ff43;
+  
 }
 
 .container:nth-child(2) .card:nth-child(1) .box .percent svg circle:nth-child(2) {
@@ -716,6 +745,7 @@ svg circle:nth-child(2) {
   flex-wrap: wrap;
   justify-content: center;
   gap: 3rem;
+  padding-bottom: 4rem;
 }
 
 .card {
@@ -780,3 +810,52 @@ svg circle:nth-child(2) {
 }
 
 
+/* Footer Section */
+.footer-section{
+  background: linear-gradient(to top, #000000, #fffcf4);
+  width: 100%;
+}
+.footer-container{
+  max-width: 50%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+.footer-name-div{
+  justify-content: center;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+.footer-logo{
+  text-decoration: none;
+  white-space: nowranavbar-collapsep;
+  font-size: 32px;
+  background: linear-gradient(to top, #decbcb, black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  font-family: 'Fredericka the Great', cursive;
+}
+.footer-personal-details{
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
+  color: white;
+  padding-bottom: 3rem;
+}
+
+.footer-rights {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding-bottom: 3rem;
+}
+
+.about-social-media-footer {
+  display: flex;
+  gap: 1rem;
+  color: white;
+}
