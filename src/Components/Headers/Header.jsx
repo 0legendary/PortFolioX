@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { PXlogoW } from "../../Assets"
+import { Link } from 'react-router-dom';
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,17 +31,28 @@ function Header() {
         <div className='header-div-pages'>
           <ul className='header-pages-text '>
             <li className={`header-content ${isScrolled ? 'scrolled' : ''}`}>
-              <h1>Home</h1>
+              <Link to={"/"}>
+                <h1>Home</h1>
+              </Link>
+            </li>
+
+            <li className={`header-content ${isScrolled ? 'scrolled' : ''}`}>
+              <Link to={"/about"}>
+                <h1>About</h1>
+              </Link>
+            </li>
+
+            <li className={`header-content ${isScrolled ? 'scrolled' : ''}`}>
+              <Link to={"/service"}>
+                <h1>Service</h1>
+              </Link>
             </li>
             <li className={`header-content ${isScrolled ? 'scrolled' : ''}`}>
-              <h1>About</h1>
+              <Link to={"/contact"}>
+                <h1>Contact</h1>
+              </Link>
             </li>
-            <li className={`header-content ${isScrolled ? 'scrolled' : ''}`}>
-              <h1>Service</h1>
-            </li>
-            <li className={`header-content ${isScrolled ? 'scrolled' : ''}`}>
-              <h1>Contact</h1>
-            </li>
+
             <li>
               <button className='header-hire'>
                 <span className='header-hire-me'>Hire me</span>

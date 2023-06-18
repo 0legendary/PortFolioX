@@ -15,7 +15,7 @@ body {
   border-bottom: none;
   z-index: 9 !important;
   background:transparent;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
+  /* box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05); */
   padding: 1.75rem 1rem;
   align-items: center;
   justify-content: space-between;
@@ -150,7 +150,7 @@ body {
   margin-right: auto;
 }
 
-.banner-name-skills {}
+
 
 .banner-name {
   color: #fff;
@@ -858,4 +858,37 @@ svg circle:nth-child(2) {
   display: flex;
   gap: 1rem;
   color: white;
+}
+/* Scroll icon */
+.scroll-icon-container {
+  position: fixed;
+  bottom: 40px;
+  right: 45px;
+  z-index: 999;
+}
+
+.scroll-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  background-color: #676767;
+  opacity: 0 !important;
+  transition: opacity 1.5s !important;
+}
+
+.scroll-icon.scrolled {
+  opacity: 1 !important;
+}
+
+.scroll-icon  {
+  color: white !important;
+  font-size: 24px !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

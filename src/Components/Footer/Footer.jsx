@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { PXlogoB } from "../../Assets"
 import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
@@ -8,7 +8,10 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
+import Scroll from '../../Constants/Scroll';
+
 function Footer() {
+
   return (
     <div>
       <section className='footer-section'>
@@ -29,7 +32,7 @@ function Footer() {
             </ul>
           </div>
 
-          
+
           <div className='footer-rights'>
             <p>© 2023 PortfolioX. All Rights Reserved |</p>
             <div>
@@ -47,11 +50,13 @@ function Footer() {
                   <a href="https://github.com/0legendary"><GitHubIcon /></a>
                 </li>
               </ul>
+
             </div>
           </div>
-
+          <Scroll />
         </div>
       </section>
+
     </div>
   )
 }
