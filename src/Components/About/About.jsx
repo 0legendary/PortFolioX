@@ -3,8 +3,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import ArchitectureIcon from '@mui/icons-material/Architecture';
-import { Biography, Service } from "../../Assets"
+import { Biography} from "../../Assets"
 
 
 function About() {
@@ -62,45 +61,8 @@ function About() {
                     </div>
                 </div>
             </section>
-
-            <section className='service'>
-                <div className='service-main-div'>
-                    <div className='service-main-div1'>
-                        <h3 className='service-heading'>What I do for You</h3>
-                    </div>
-                    <div className='service-items'>
-                        <div>
-                            <div className='service-box'>
-                                <h3 className='service-box-heading'><ArchitectureIcon /> Web Designing</h3>
-                                <p>Provides a seamless user experience and user-friendly. Highly importance for client's
-                                    brand and goals</p>
-                            </div>
-                        </div>
-                        <div>
-                            <div className='service-box'>
-                                <h3 className='service-box-heading'><ArchitectureIcon />React</h3>
-                                <p>Provides a seamless user experience and user-friendly. Highly importance for client's
-                                    brand and goals</p>
-                            </div>
-                        </div>
-                        <div>
-                            <div className='service-box'>
-                                <h3 className='service-box-heading'><ArchitectureIcon />Git Service</h3>
-                                <p>Provides a seamless user experience and user-friendly. Highly importance for client's
-                                    brand and goals.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div>
-                        <h3 className="service-more">More Service
-                            <span className='next-page'>
-                                <img src={Service} alt=">"/>
-                            </span>
-                        </h3>
-                    </div>
-                </div>
-            </section>
+            
+            
         </div>
     )
 }

@@ -1,9 +1,7 @@
-import About from "./Components/About/About";
-import Projects from "./Components/About/Projects";
-import Skills from "./Components/About/Skills";
+
 import Footer from "./Components/Footer/Footer";
-import Banner from "./Components/Headers/Banner";
 import Header from "./Components/Headers/Header"
+
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -12,6 +10,9 @@ import {
   RouterProvider,
  
 } from "react-router-dom"
+
+import HomeFiles from "./Pages/HomePage/HomeFiles";
+import AboutFiles from "./Pages/AboutPage/AboutFiles";
 
 const Layout = ()=>{
   return (
@@ -27,12 +28,7 @@ const Layout = ()=>{
 const HomePage = ()=>{
   return (
     <div>
-      
-      <Banner/>
-      <About/>
-      <Skills/>
-      <Projects/>
-      
+    <HomeFiles/>
     </div>
   )
 }
@@ -40,7 +36,7 @@ const HomePage = ()=>{
 const AboutPage = ()=>{
   return(
     <div>
-
+     <AboutFiles/>
     </div>
   )
 }
@@ -70,6 +66,7 @@ function App() {
         <Route path="/about" element={<Layout/>}>
           <Route index element={<AboutPage/>}></Route>
         </Route>
+
         <Route path="/service" element={<Layout/>}>
           <Route index element={<ServicePage/>}></Route>
         </Route>
