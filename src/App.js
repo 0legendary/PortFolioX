@@ -13,6 +13,7 @@ import {
 
 import HomeFiles from "./Pages/HomePage/HomeFiles";
 import AboutFiles from "./Pages/AboutPage/AboutFiles";
+import ServiceFiles from "./Pages/ServicePage/ServiceFiles";
 
 const Layout = ()=>{
   return (
@@ -43,7 +44,7 @@ const AboutPage = ()=>{
 const ServicePage = ()=>{
   return(
     <div>
-
+      <ServiceFiles/>
     </div>
   )
 }

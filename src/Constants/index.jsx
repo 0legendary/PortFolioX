@@ -12,7 +12,7 @@ export const projectDescription = [
         des2: "Developed with standard UI design",
       },
       {
-        _id: 1001,
+        _id: 1002,
         img:PortFolio,
         alt:"PortFolio",
         title: "Personal Website",
@@ -20,7 +20,7 @@ export const projectDescription = [
         des2: "Developed with standard UI design",
       },
     {
-        _id: 1001,
+        _id: 1003,
         img:PortFolio,
         alt:"PortFolio",
         title: "Personal Website",
@@ -28,7 +28,7 @@ export const projectDescription = [
         des2: "Developed with standard UI design",
       },
       {
-        _id: 1001,
+        _id: 1004,
         img:PortFolio,
         alt:"PortFolio",
         title: "Personal Website",

@@ -6,7 +6,7 @@ import Skills from '../About/Skills';
 
 
 
-function AboutMe() {
+function AboutManager() {
     return (
         <div>
             <div className='about-page-container'>
@@ -41,4 +41,4 @@ function AboutMe() {
     )
 }
 
-export default AboutMe
+export default AboutManager

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Foldit:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
 
 body {
   margin: 0;
@@ -385,42 +386,64 @@ background-clip: text;
   font-size: x-large;
   font-weight: 400;
   font-family: 'Courier New', Courier, monospace;
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
+  padding-bottom: 2rem;
   color: white;
 }
 
 .service-items {
   display: flex;
   gap: 1rem;
-  margin-top: 1.5rem;
-  margin-bottom: 2rem;
+  flex-basis: calc(33.33% - 1rem);
 }
 
 .service-box {
-  background: linear-gradient(to bottom, grey, white);
+  background: linear-gradient(to bottom, #434242, black);
   padding: 40px;
   padding-top: 10%;
   padding-bottom: 25%;
   border-radius: 15px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
-  transition: transform 0.5s, filter 0.5s;
-  filter: blur(0);
+  transition: transform 0.5s, filter 0.5s, color 0.5s;
 }
 
 .service-box:hover {
   transform: scale(1.1);
+color: white;
   filter: blur(0);
   z-index: 2;
 }
 
-.service-items:hover .service-box:not(:hover) {
-  filter: blur(10px);
+.service-box:not(:hover) {
+  color: black;
 }
+
 
 .service-box-heading {
   font-size: x-large;
   margin-bottom: 1rem;
+  font-family: 'Bruno Ace SC', cursive;
 }
+.service-box-icon{
+  padding-right: 9px;
+}
+.service-box p{
+  font-family: 'Dancing Script', cursive;
+  font-size: x-large;
+}
+.service-items-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-bottom: 3rem;
+}
+.service-items-container:hover .service-box:not(:hover) {
+  filter: blur(5px);
+  
+}
+
+
 
 .service-more {
   display: flex;
@@ -429,6 +452,8 @@ background-clip: text;
   font-size: x-large;
   color: black;
   font-family: 'Courier New', Courier, monospace;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
 }
 
 .service-more:hover {

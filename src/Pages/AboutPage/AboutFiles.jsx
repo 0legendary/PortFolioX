@@ -1,10 +1,10 @@
 import React from 'react'
-import AboutMe from '../../Components/AboutPageMain/AboutMe'
+import AboutManager from '../../Components/AboutPageMain/AboutManager'
 
 function AboutFiles() {
   return (
     <div>
-      <AboutMe/>
+      <AboutManager/>
     </div>
   )
 }
