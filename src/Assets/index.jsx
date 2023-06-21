@@ -7,6 +7,9 @@ import ExpoLogo from "./png/icons/expo-icon.png"
 import PortFolio from "./png/Projects/html-website.png"
 import PXlogoW from "./png/icons/PX-logo.png"
 import PXlogoB from "./png/icons/PX-logo-black.png"
+import developing from "./png/background-img/developing.jpg"
+import discussing from "./png/background-img/discussion.jpg"
+import finished from "./png/background-img/finished.jpg"
 export{
     Biography,
     MoreIcon,
@@ -15,5 +18,8 @@ export{
     ExpoLogo,
     PortFolio,
     PXlogoW,
-    PXlogoB
+    PXlogoB,
+    developing,
+    discussing,
+    finished
 };

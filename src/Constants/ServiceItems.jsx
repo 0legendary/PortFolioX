@@ -3,7 +3,7 @@ import AutoModeIcon from '@mui/icons-material/AutoMode';
 export const ServiceItems = [
     {
         _id: 1101,
-        img:<AutoModeIcon/>,
+        img: <AutoModeIcon />,
         Heading: "What I do for You",
         description: `Provides a seamless user experience and user-friendly.
                       Highly importance for clients brand and goals`
@@ -11,7 +11,7 @@ export const ServiceItems = [
     },
     {
         _id: 1102,
-        img:<AutoModeIcon/>,
+        img: <AutoModeIcon />,
         Heading: "What I do for You",
         description: `Provides a seamless user experience and user-friendly.
                       Highly importance for clients brand and goals`
@@ -19,7 +19,7 @@ export const ServiceItems = [
     },
     {
         _id: 1103,
-        img:<AutoModeIcon/>,
+        img: <AutoModeIcon />,
         Heading: "What I do for You",
         description: `Provides a seamless user experience and user-friendly.
                       Highly importance for clients brand and goals`
@@ -27,7 +27,7 @@ export const ServiceItems = [
     },
     {
         _id: 1103,
-        img:<AutoModeIcon/>,
+        img: <AutoModeIcon />,
         Heading: "What I do for You",
         description: `Provides a seamless user experience and user-friendly.
                       Highly importance for clients brand and goals`
@@ -35,7 +35,7 @@ export const ServiceItems = [
     },
     {
         _id: 1103,
-        img:<AutoModeIcon/>,
+        img: <AutoModeIcon />,
         Heading: "What I do for You",
         description: `Provides a seamless user experience and user-friendly.
                       Highly importance for clients brand and goals`
@@ -43,10 +43,39 @@ export const ServiceItems = [
     },
     {
         _id: 1103,
-        img:<AutoModeIcon/>,
+        img: <AutoModeIcon />,
         Heading: "What I do for You",
         description: `Provides a seamless user experience and user-friendly.
                       Highly importance for clients brand and goals`
 
     },
+]
+
+export const ServicesHome = [
+
+    {
+        _id: 1201,
+        img: <AutoModeIcon />,
+        Heading: "What I do for You",
+        description: `Provides a seamless user experience and user-friendly.
+                          Highly importance for clients brand and goals`
+
+    },
+    {
+        _id: 1201,
+        img: <AutoModeIcon />,
+        Heading: "What I do for You",
+        description: `Provides a seamless user experience and user-friendly.
+                          Highly importance for clients brand and goals`
+
+    },
+    {
+        _id: 1201,
+        img: <AutoModeIcon />,
+        Heading: "What I do for You",
+        description: `Provides a seamless user experience and user-friendly.
+                          Highly importance for clients brand and goals`
+
+    },
+
 ]

@@ -2,8 +2,24 @@ import React from 'react'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Link } from 'react-router-dom';
 import { ServiceItems } from '../../Constants/ServiceItems';
+import { developing } from '../../Assets';
+import { discussing } from '../../Assets';
+import { finished } from '../../Assets';
+
+
 
 function ServiceManager() {
+    const backgroundImage1 = {
+    backgroundImage: `url(${developing})`,
+  };
+  
+  const backgroundImage2 = {
+    backgroundImage: `url(${discussing})`,
+  };
+  
+  const backgroundImage3 = {
+    backgroundImage: `url(${finished})`,
+  }
     return (
         <div>
             <div>
@@ -37,6 +53,49 @@ function ServiceManager() {
                             </div>
                         </div>
                     </section>
+
+                </div>
+                <div className='service-providance'>
+                    <div className='service-providance-container'>
+                        <div>
+                            <h1>Ingenious approaches to Enhance Your Creative Endeavors</h1>
+                        </div>
+                        <div className='service-card-container'>
+                            <div class="service-card">
+                                <div class="service-img-container">
+                                    <div class="service-img"  style={backgroundImage1}>
+                                    </div>
+                                    <div class="service-b-description ">
+                                        <span class="service-title">
+                                        Discuss the Project
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-card">
+                                <div class="service-img-container">
+                                    <div class="service-img" style={backgroundImage2}>
+                                    </div>
+                                    <div class="service-b-description ">
+                                        <span class="service-title">
+                                        Develop & Elaborate
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-card">
+                                <div class="service-img-container">
+                                    <div class="service-img" style={backgroundImage3}>
+                                    </div>
+                                    <div class="service-b-description ">
+                                        <span class="service-title">
+                                        Final Approvement
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
