@@ -54,29 +54,29 @@ function ContactManager() {
 
               <div className="direct-contact-container">
                 <ul className="contact-list">
-                  <li className="list-item"><i className="fa fa-map-marker fa-2x"><span className="contact-text place">City, State</span></i></li>
-                  <li className="list-item"><i className="fa fa-phone fa-2x"><span className="contact-text phone">Phone: (212) 555-2368</span></i></li>
-                  <li className="list-item"><i className="fa fa-envelope fa-2x"><span className="contact-text gmail">Email: hitmeup@gmail.com</span></i></li>
+                  <li className="list-item"><i className="fa fa-map-marker fa-2x"><span className="contact-text place">Calicut, Kerala</span></i></li>
+                  <li className="list-item"><i className="fa fa-phone fa-2x"><span className="contact-text phone">Phone: (+91)9961689333</span></i></li>
+                  <li className="list-item"><i className="fa fa-envelope fa-2x"><span className="contact-text gmail">Email: alenmullassery123@gmail.com</span></i></li>
                 </ul>
 
                 <div className='border-line-contact'>
                   <ul className="social-media-list">
-                    <li>
+                    <li onClick={() => window.open("https://github.com/0legendary", "_blank")}>
                       <a href="https://github.com/0legendary" className="contact-icon">
                         <i className="fa fa-github" aria-hidden="true"></i>
                       </a>
                     </li>
-                    <li>
+                    <li onClick={() => window.open("https://twitter.com/_Alen_m_", "_blank")}>
                       <a href="https://twitter.com/_Alen_m_"  className="contact-icon">
                         <i className="fa fa-twitter" aria-hidden="true"></i>
                       </a>
                     </li>
-                    <li>
+                    <li onClick={() => window.open("https://www.instagram.com/_alen_m__/", "_blank")}>
                       <a href="https://www.instagram.com/_alen_m__/"  className="contact-icon">
                         <i className="fa fa-instagram" aria-hidden="true"></i>
                       </a>
                     </li>
-                    <li>
+                    <li onClick={() => window.open("https://www.linkedin.com/in/alen-m-4a7a39241/", "_blank")}>
                       <a href="https://www.linkedin.com/in/alen-m-4a7a39241/" className="contact-icon">
                         <i className="fa fa-linkedin" aria-hidden="true"></i>
                       </a>
