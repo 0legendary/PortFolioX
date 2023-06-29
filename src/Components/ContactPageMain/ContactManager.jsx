@@ -1,5 +1,9 @@
 import React from 'react';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import ThumbDownAltIcon from '@mui/icons-material/ThumbDownAlt';
+import ReplyIcon from '@mui/icons-material/Reply';
+
 import { Link } from 'react-router-dom';
 
 function ContactManager() {
@@ -67,12 +71,12 @@ function ContactManager() {
                       </a>
                     </li>
                     <li onClick={() => window.open("https://twitter.com/_Alen_m_", "_blank")}>
-                      <a href="https://twitter.com/_Alen_m_"  className="contact-icon">
+                      <a href="https://twitter.com/_Alen_m_" className="contact-icon">
                         <i className="fa fa-twitter" aria-hidden="true"></i>
                       </a>
                     </li>
                     <li onClick={() => window.open("https://www.instagram.com/_alen_m__/", "_blank")}>
-                      <a href="https://www.instagram.com/_alen_m__/"  className="contact-icon">
+                      <a href="https://www.instagram.com/_alen_m__/" className="contact-icon">
                         <i className="fa fa-instagram" aria-hidden="true"></i>
                       </a>
                     </li>
@@ -91,6 +95,41 @@ function ContactManager() {
               </div>
             </div>
           </section>
+        </div>
+      </div>
+
+      <div className='comment-section'>
+        <div className='comment-container'>
+
+          <div>
+            <div class="comment">
+              <div className='name-email-container'>
+                <div className='avatar-name-container'>
+                  <img src="https://cdn.iconscout.com/icon/free/png-256/free-avatar-370-456322.png?f=webp" alt="avatar" class="avatar"></img>
+                  <h1 class="name">john doe</h1>
+                </div>
+                <div className='contact-email-comment'>
+                  <a href="mailto:alenmullassery123@gmail.com">alenmullassery123@gmail.com</a>
+                </div>
+              </div>
+
+              <div className='align'>
+                <div>
+                  <p class="message">This is a comment.</p>
+                </div>
+                <div className='icons-container'>
+                  <div className='like-dislike'>
+                    <ThumbUpIcon className='like-icon' />
+                    <ThumbDownAltIcon />
+                  </div>
+                  <div className='reply-container'>
+                    <ReplyIcon className='reply-icon' />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
