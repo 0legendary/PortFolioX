@@ -3,7 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Akronim&family=Cormorant+SC:wght@300&family=Playball&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Fanwood+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grandiflora+One&display=swap');
 body {
   margin: 0;
 }
@@ -870,7 +872,9 @@ svg circle:nth-child(2) {
 
 /* Footer Section */
 .footer-section {
-  background: linear-gradient(to top, #000000, #fffcf4);
+  background: linear-gradient(to right, #1a1a1a 0%, #333333 19%, #4d4d4d 40%, #666666 60%, #808080 83%, #1a1a1a 100%);
+    background-size: 10000px 100%;
+    animation: bg 20s linear infinite;
   width: 100%;
 }
 
@@ -1483,6 +1487,8 @@ textarea.form-control {
   margin: auto;
   padding: 2rem;
   color: white;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 .comment {
@@ -1515,7 +1521,8 @@ textarea.form-control {
 .name {
   margin-left: 20px;
   text-transform: capitalize;
-  font-size: large;
+  font-family: 'Grandiflora One', serif;
+  font-size: 25px;
 }
 
 .contact-email-comment {
@@ -1543,8 +1550,11 @@ textarea.form-control {
 
   
 .message {
-  margin-top: 6px;
+  margin-top: 1rem;
   margin-left: 0px;
+  margin-bottom: 1rem;
+  font-family: 'Fanwood Text', serif;
+  font-size: 19px;
 }
 .icons-container{
   display: flex;
@@ -1571,3 +1581,4 @@ textarea.form-control {
   font-size: xx-large !important;
   
 }
+

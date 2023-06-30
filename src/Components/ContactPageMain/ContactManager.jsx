@@ -1,24 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ThumbUpIcon from '@mui/icons-material/ThumbUp';
-import ThumbDownAltIcon from '@mui/icons-material/ThumbDownAlt';
-import ReplyIcon from '@mui/icons-material/Reply';
-
 import { Link } from 'react-router-dom';
 
 function ContactManager() {
+  const [comments, setComments] = useState([]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const name = e.target.elements.name.value;
     const email = e.target.elements.email.value;
     const message = e.target.elements.message.value;
 
-    // Perform any desired actions with the form data
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Message:', message);
+    const newComment = { name, email, message };
+    setComments([...comments, newComment]);
 
-    // Reset the form fields
     e.target.reset();
   };
 
@@ -34,8 +29,8 @@ function ContactManager() {
           </h1>
         </div>
         <div className='contact-body'>
+          {/* Contact form */}
           <section id="contact">
-
             <div className="contact-wrapper">
               <form id="contact-form" className="form-horizontal" onSubmit={handleSubmit}>
                 <div className="form-group">
@@ -56,11 +51,12 @@ function ContactManager() {
                 </button>
               </form>
 
+              {/* Contact information and social media links */}
               <div className="direct-contact-container">
                 <ul className="contact-list">
                   <li className="list-item"><i className="fa fa-map-marker fa-2x"><span className="contact-text place">Calicut, Kerala</span></i></li>
                   <li className="list-item"><i className="fa fa-phone fa-2x"><span className="contact-text phone">Phone: (+91)9961689333</span></i></li>
-                  <li className="list-item"><i className="fa fa-envelope fa-2x"><span className="contact-text gmail">Email: alenmullassery123@gmail.com</span></i></li>
+                  <li className="list-item"><i className="fa fa-envelope fa-2x"><a href='mailto:bitsandbytes.alen@gmail.com'><span className="contact-text gmail">Email: bitsandbytes.alen@gmail.com</span></a></i></li>
                 </ul>
 
                 <div className='border-line-contact'>
@@ -88,7 +84,6 @@ function ContactManager() {
                   </ul>
                 </div>
 
-
                 <div className="copyright border-line-contact">
                   &copy; ALL OF THE RIGHTS RESERVED
                 </div>
@@ -98,26 +93,29 @@ function ContactManager() {
         </div>
       </div>
 
-      <div className='comment-section'>
-        <div className='comment-container'>
+      {/* Comment section */}
+      {comments.map((comment, index) => (
+        <div className='comment-section'>
+          <div className='comment-container'>
 
-          <div>
-            <div class="comment">
+            <div key={index} className="comment">
               <div className='name-email-container'>
                 <div className='avatar-name-container'>
-                  <img src="https://cdn.iconscout.com/icon/free/png-256/free-avatar-370-456322.png?f=webp" alt="avatar" class="avatar"></img>
-                  <h1 class="name">john doe</h1>
+                  <img src="https://cdn.iconscout.com/icon/free/png-256/free-avatar-370-456322.png?f=webp" alt="avatar" className="avatar" />
+                  <h1 className="name">{comment.name}</h1>
                 </div>
                 <div className='contact-email-comment'>
-                  <a href="mailto:alenmullassery123@gmail.com">alenmullassery123@gmail.com</a>
+                  <a href={`mailto:${comment.email}`}>{comment.email}</a>
                 </div>
               </div>
 
               <div className='align'>
                 <div>
-                  <p class="message">This is a comment.</p>
+                  <p className="message">{comment.message}</p>
                 </div>
-                <div className='icons-container'>
+              </div>
+
+              { /* <div className='icons-container'>
                   <div className='like-dislike'>
                     <ThumbUpIcon className='like-icon' />
                     <ThumbDownAltIcon />
@@ -125,13 +123,12 @@ function ContactManager() {
                   <div className='reply-container'>
                     <ReplyIcon className='reply-icon' />
                   </div>
-                </div>
-              </div>
+                </div> */}
             </div>
-          </div>
 
+          </div>
         </div>
-      </div>
+      ))}
     </div>
   );
 }
