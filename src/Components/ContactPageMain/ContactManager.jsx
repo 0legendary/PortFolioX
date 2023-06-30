@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Link } from 'react-router-dom';
+import { avatar } from '../../Constants/ServiceItems';
 
 function ContactManager() {
   const [comments, setComments] = useState([]);
@@ -100,8 +101,19 @@ function ContactManager() {
 
             <div key={index} className="comment">
               <div className='name-email-container'>
-                <div className='avatar-name-container'>
-                  <img src="https://cdn.iconscout.com/icon/free/png-256/free-avatar-370-456322.png?f=webp" alt="avatar" className="avatar" />
+                <div className='avatar-name-container' >
+                  {avatar.map((item, itemIndex) => {
+                    if (itemIndex === index % avatar.length) {
+                      return (
+                        <div className='avatar' key={item._id}>
+                          <img src={item.avt} alt='😊' />
+                        </div>
+                      );
+                    }
+                      return null;
+
+                  })}
+
                   <h1 className="name">{comment.name}</h1>
                 </div>
                 <div className='contact-email-comment'>
