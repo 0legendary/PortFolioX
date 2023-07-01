@@ -1,10 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Link } from 'react-router-dom';
 import { avatar } from '../../Constants/ServiceItems';
+import { initializeApp } from 'firebase/app';
+import { getDatabase, ref, push, onValue, off } from 'firebase/database';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCPQl58BGJtJ0K7UPSRSf0F14lW_8M4da8",
+  authDomain: "personal-website-e3ef0.firebaseapp.com",
+  projectId: "personal-website-e3ef0",
+  storageBucket: "personal-website-e3ef0.appspot.com",
+  messagingSenderId: "938148258775",
+  appId: "1:938148258775:web:77f1787829ce6ff65d2192",
+  measurementId: "G-VQ6EQ0YBPW"
+};
+
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
 
 function ContactManager() {
   const [comments, setComments] = useState([]);
+
+  useEffect(() => {
+    const commentsRef = ref(database, 'comments');
+    const commentsListener = onValue(commentsRef, (snapshot) => {
+      const commentsData = snapshot.val();
+      const commentsArray = commentsData ? Object.values(commentsData) : [];
+      setComments(commentsArray);
+      
+    });
+
+    return () => {
+      off(commentsRef, commentsListener);
+    };
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,8 +44,12 @@ function ContactManager() {
     const newComment = { name, email, message };
     setComments([...comments, newComment]);
 
+    const commentsRef = ref(database, 'comments');
+    push(commentsRef, newComment);
+
     e.target.reset();
   };
+
 
   return (
     <div>
@@ -96,7 +129,7 @@ function ContactManager() {
 
       {/* Comment section */}
       {comments.map((comment, index) => (
-        <div className='comment-section'>
+        <div className='comment-section' key={index}>
           <div className='comment-container'>
 
             <div key={index} className="comment">
