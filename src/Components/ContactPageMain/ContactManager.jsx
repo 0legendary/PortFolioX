@@ -27,7 +27,8 @@ function ContactManager() {
     const commentsListener = onValue(commentsRef, (snapshot) => {
       const commentsData = snapshot.val();
       const commentsArray = commentsData ? Object.values(commentsData) : [];
-      setComments(commentsArray);
+      const reversedComments = commentsArray.reverse(); // Reverse the order of comments
+      setComments(reversedComments);
       setLoading(false); // Set loading to false once comments are fetched
     });
 
@@ -43,13 +44,17 @@ function ContactManager() {
     const message = e.target.elements.message.value;
 
     const newComment = { name, email, message };
-    setComments([...comments, newComment]);
+    const reversedComments = [newComment, ...comments]; // Reverse the order of comments
 
+    setComments(reversedComments);
     const commentsRef = ref(database, 'comments');
     push(commentsRef, newComment);
 
     e.target.reset();
   };
+
+  
+
 
   return (
     <div>
@@ -65,8 +70,10 @@ function ContactManager() {
         <div className='contact-body'>
           {/* Contact form */}
           <section id="contact">
+
             <div className="contact-wrapper">
               <form id="contact-form" className="form-horizontal" onSubmit={handleSubmit}>
+                <h1>Comments</h1>
                 <div className="form-group">
                   <div className="col-sm-12">
                     <input type="text" className="form-control" id="name" placeholder="NAME" name="name" required />
@@ -136,17 +143,15 @@ function ContactManager() {
               <span className='dots-span'></span>
               <span className='dots-span'></span>
               <span className='dots-span'></span>
-              
             </div>
           </div>
-          
         </div>
 
       ) : (
-        comments.map((comment, index) => (
-          <div className='comment-section' key={index}>
-            <div className='comment-container'>
 
+        comments.map((comment, index) => (
+          <div className='comment-section' key={index} >
+            <div className='comment-container'>
               <div key={index} className="comment">
                 <div className='name-email-container'>
                   <div className='avatar-name-container' >
