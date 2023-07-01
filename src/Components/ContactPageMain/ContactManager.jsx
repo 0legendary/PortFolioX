@@ -20,6 +20,7 @@ const database = getDatabase(app);
 
 function ContactManager() {
   const [comments, setComments] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const commentsRef = ref(database, 'comments');
@@ -27,7 +28,7 @@ function ContactManager() {
       const commentsData = snapshot.val();
       const commentsArray = commentsData ? Object.values(commentsData) : [];
       setComments(commentsArray);
-      
+      setLoading(false); // Set loading to false once comments are fetched
     });
 
     return () => {
@@ -49,7 +50,6 @@ function ContactManager() {
 
     e.target.reset();
   };
-
 
   return (
     <div>
@@ -128,39 +128,52 @@ function ContactManager() {
       </div>
 
       {/* Comment section */}
-      {comments.map((comment, index) => (
-        <div className='comment-section' key={index}>
-          <div className='comment-container'>
+      {loading ? (
+        <div className='comment-section'>
+          <div class="gooey">
+            <span class="dot"></span>
+            <div class="dots">
+              <span className='dots-span'></span>
+              <span className='dots-span'></span>
+              <span className='dots-span'></span>
+              
+            </div>
+          </div>
+          
+        </div>
 
-            <div key={index} className="comment">
-              <div className='name-email-container'>
-                <div className='avatar-name-container' >
-                  {avatar.map((item, itemIndex) => {
-                    if (itemIndex === index % avatar.length) {
-                      return (
-                        <div className='avatar' key={item._id}>
-                          <img src={item.avt} alt='😊' />
-                        </div>
-                      );
-                    }
+      ) : (
+        comments.map((comment, index) => (
+          <div className='comment-section' key={index}>
+            <div className='comment-container'>
+
+              <div key={index} className="comment">
+                <div className='name-email-container'>
+                  <div className='avatar-name-container' >
+                    {avatar.map((item, itemIndex) => {
+                      if (itemIndex === index % avatar.length) {
+                        return (
+                          <div className='avatar' key={item._id}>
+                            <img src={item.avt} alt='😊' />
+                          </div>
+                        );
+                      }
                       return null;
-
-                  })}
-
-                  <h1 className="name">{comment.name}</h1>
+                    })}
+                    <h1 className="name">{comment.name}</h1>
+                  </div>
+                  <div className='contact-email-comment'>
+                    <a href={`mailto:${comment.email}`}>{comment.email}</a>
+                  </div>
                 </div>
-                <div className='contact-email-comment'>
-                  <a href={`mailto:${comment.email}`}>{comment.email}</a>
-                </div>
-              </div>
 
-              <div className='align'>
-                <div>
-                  <p className="message">{comment.message}</p>
+                <div className='align'>
+                  <div>
+                    <p className="message">{comment.message}</p>
+                  </div>
                 </div>
-              </div>
 
-              { /* <div className='icons-container'>
+                { /* <div className='icons-container'>
                   <div className='like-dislike'>
                     <ThumbUpIcon className='like-icon' />
                     <ThumbDownAltIcon />
@@ -169,11 +182,12 @@ function ContactManager() {
                     <ReplyIcon className='reply-icon' />
                   </div>
                 </div> */}
-            </div>
+              </div>
 
+            </div>
           </div>
-        </div>
-      ))}
+        ))
+      )}
     </div>
   );
 }
