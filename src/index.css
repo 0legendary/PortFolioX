@@ -6,7 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fanwood+Text&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Grandiflora+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
 body {
   margin: 0;
 }
@@ -1207,6 +1207,12 @@ svg circle:nth-child(2) {
   font-family: "Lato";
   font-weight: 400;
 }
+.comment-heading-form{
+  color: white;
+  font-size: x-large;
+  padding-bottom: 1rem;
+  font-family: 'Yellowtail', cursive;
+}
 
 .form-group {
   padding-bottom: 1rem;
@@ -1606,7 +1612,9 @@ textarea.form-control {
 .contact-email-comment a {
   text-align: right;
   padding-right: 1rem;
-  color: #7e7e7e;
+  color: #8d8d8d;
+  font-family: 'Playball';
+  transition: 0.3s ease-in;
 }
 
 .contact-email-comment a:hover {
@@ -1629,31 +1637,11 @@ textarea.form-control {
   font-size: 19px;
 }
 
-.icons-container {
+.comment-date{
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: space-between;
-  justify-content: space-between;
-
+  justify-content: right;
+  align-items: flex-end;
+  padding-right: 3px;
+  padding-bottom: 2px;
 }
 
-.like-dislike {
-  display: flex;
-  text-align: left;
-  margin-top: 10px;
-}
-
-.like-icon {
-  margin-right: 1rem;
-}
-
-.reply-container {
-  margin-top: 10px;
-  text-align: right;
-}
-
-.reply-icon {
-  font-size: xx-large !important;
-
-}

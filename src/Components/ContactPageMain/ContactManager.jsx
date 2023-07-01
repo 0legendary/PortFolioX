@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { avatar } from '../../Constants/ServiceItems';
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, push, onValue, off } from 'firebase/database';
+import { formatDistanceToNow } from 'date-fns';
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyCPQl58BGJtJ0K7UPSRSf0F14lW_8M4da8",
@@ -43,7 +45,7 @@ function ContactManager() {
     const email = e.target.elements.email.value;
     const message = e.target.elements.message.value;
 
-    const newComment = { name, email, message };
+    const newComment = { name, email, message, timestamp: new Date().toISOString() };
     const reversedComments = [newComment, ...comments]; // Reverse the order of comments
 
     setComments(reversedComments);
@@ -53,7 +55,12 @@ function ContactManager() {
     e.target.reset();
   };
 
-  
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' && e.shiftKey === false) {
+      e.preventDefault();
+      document.getElementById('submit').click();
+    }
+  };
 
 
   return (
@@ -73,7 +80,7 @@ function ContactManager() {
 
             <div className="contact-wrapper">
               <form id="contact-form" className="form-horizontal" onSubmit={handleSubmit}>
-                <h1>Comments</h1>
+                <h1 className='comment-heading-form'>Leave a Comment</h1>
                 <div className="form-group">
                   <div className="col-sm-12">
                     <input type="text" className="form-control" id="name" placeholder="NAME" name="name" required />
@@ -84,7 +91,7 @@ function ContactManager() {
                     <input type="email" className="form-control" id="email" placeholder="EMAIL" name="email" required />
                   </div>
                 </div>
-                <textarea className="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+                <textarea className="form-control" rows="10" placeholder="MESSAGE" name="message" onKeyDown={handleKeyDown} required></textarea>
                 <button className="btn btn-primary send-button" id="submit" type="submit" value="SEND">
                   <div className="alt-send-button">
                     <i className="fa fa-paper-plane"></i><span className="send-text">SEND</span>
@@ -150,6 +157,7 @@ function ContactManager() {
       ) : (
 
         comments.map((comment, index) => (
+          
           <div className='comment-section' key={index} >
             <div className='comment-container'>
               <div key={index} className="comment">
@@ -178,19 +186,14 @@ function ContactManager() {
                   </div>
                 </div>
 
-                { /* <div className='icons-container'>
-                  <div className='like-dislike'>
-                    <ThumbUpIcon className='like-icon' />
-                    <ThumbDownAltIcon />
-                  </div>
-                  <div className='reply-container'>
-                    <ReplyIcon className='reply-icon' />
-                  </div>
-                </div> */}
+                <div className='comment-date'>
+                <p>{formatDistanceToNow(new Date(comment.timestamp), { addSuffix: true })}</p>
+                </div>
               </div>
 
             </div>
           </div>
+
         ))
       )}
     </div>
