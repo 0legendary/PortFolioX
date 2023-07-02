@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
+import { Link } from 'react-router-dom';
 
 function Banner() {
   const typedRef = useRef(null);
@@ -42,10 +43,18 @@ function Banner() {
               dynamic approach!
             </p>
             <div>
-              <button className='banner-btn'>Hire Me</button>
-              <button className='banner-btn'>My Portfolio</button>
+              <Link to={"/contact"}>
+                <button className='banner-btn'>Connect Me</button>
+              </Link>
+
+              <button className='banner-btn'>
+                <a href="https://drive.google.com/file/d/1WBJaSH8hx1nGVcysdWC-2W1QzIgfM88Z/view?usp=drive_link"
+                  target="_blank" rel="noopener noreferrer">
+                  Download CV
+                </a>
+              </button>
             </div>
-            
+
           </div>
         </div>
       </section>

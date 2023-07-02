@@ -1,6 +1,7 @@
 import React from 'react'
 import {MoreIcon} from "../../Assets"
 import { ServicesHome } from '../../Constants/ServiceItems';
+import { Link } from 'react-router-dom';
 function Services() {
   return (
     <div>
@@ -24,11 +25,14 @@ function Services() {
                                 })}
                             </div>
                     <div>
-                        <h3 className="service-more">More Service
+                        <Link to={"/service"}>
+                            <h3 className="service-more">More Service
                             <span className='next-page'>
                                 <img src={MoreIcon} alt=">"/>
                             </span>
                         </h3>
+                        </Link>
+                        
                     </div>
                 </div>
             </section>

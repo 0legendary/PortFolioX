@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Link } from 'react-router-dom';
 import { avatar } from '../../Constants/ServiceItems';
@@ -19,6 +19,24 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
+
+function useInterval(callback, delay) {
+  const savedCallback = useRef();
+
+  useEffect(() => {
+    savedCallback.current = callback;
+  }, [callback]);
+
+  useEffect(() => {
+    function tick() {
+      savedCallback.current();
+    }
+    if (delay !== null) {
+      const id = setInterval(tick, delay);
+      return () => clearInterval(id);
+    }
+  }, [delay]);
+}
 
 function ContactManager() {
   const [comments, setComments] = useState([]);
@@ -62,7 +80,15 @@ function ContactManager() {
     }
   };
 
-
+  useInterval(() => {
+    const commentsRef = ref(database, 'comments');
+    onValue(commentsRef, (snapshot) => {
+      const commentsData = snapshot.val();
+      const commentsArray = commentsData ? Object.values(commentsData) : [];
+      const reversedComments = commentsArray.reverse(); // Reverse the order of comments
+      setComments(reversedComments);
+    });
+  }, 10000);
   return (
     <div>
       <div>
@@ -157,7 +183,7 @@ function ContactManager() {
       ) : (
 
         comments.map((comment, index) => (
-          
+
           <div className='comment-section' key={index} >
             <div className='comment-container'>
               <div key={index} className="comment">
@@ -187,7 +213,7 @@ function ContactManager() {
                 </div>
 
                 <div className='comment-date'>
-                <p>{formatDistanceToNow(new Date(comment.timestamp), { addSuffix: true })}</p>
+                  <p>{formatDistanceToNow(new Date(comment.timestamp), { addSuffix: true })}</p>
                 </div>
               </div>
 

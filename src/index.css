@@ -7,6 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Grandiflora+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Electrolize&display=swap');
 body {
   margin: 0;
 }
@@ -1643,5 +1644,7 @@ textarea.form-control {
   align-items: flex-end;
   padding-right: 3px;
   padding-bottom: 2px;
+  color:#707070;
+  font-family: 'Electrolize', sans-serif;
 }
 
