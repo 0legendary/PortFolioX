@@ -17,10 +17,10 @@ function Projects() {
                                         <circle cx="70" cy="70" r="70"></circle>
                                     </svg>
                                     <div className="num">
-                                        <h2>70<span>%</span></h2>
+                                        <h2>75<span>%</span></h2>
                                     </div>
                                 </div>
-                                <h2 className="text">Projects</h2>
+                                <h2 className="text">Experience</h2>
                             </div>
                         </div>
                     </div>
@@ -34,7 +34,7 @@ function Projects() {
                                         <circle cx="70" cy="70" r="70"></circle>
                                     </svg>
                                     <div className="num">
-                                        <h2>82<span>%</span></h2>
+                                        <h2>87<span>%</span></h2>
                                     </div>
                                 </div>
                                 <h2 className="text">Innovations</h2>
@@ -51,10 +51,10 @@ function Projects() {
                                         <circle cx="70" cy="70" r="70"></circle>
                                     </svg>
                                     <div className="num">
-                                        <h2>72<span>%</span></h2>
+                                        <h2>92<span>%</span></h2>
                                     </div>
                                 </div>
-                                <h2 className="text">Effort</h2>
+                                <h2 className="text">Code Quality</h2>
                             </div>
                         </div>
                     </div>
@@ -68,10 +68,10 @@ function Projects() {
                                         <circle cx="70" cy="70" r="70"></circle>
                                     </svg>
                                     <div className="num">
-                                        <h2>60<span>%</span></h2>
+                                        <h2>80<span>%</span></h2>
                                     </div>
                                 </div>
-                                <h2 className="text">Skill Set</h2>
+                                <h2 className="text">Performance</h2>
                             </div>
                         </div>
                     </div>
@@ -91,15 +91,16 @@ function Projects() {
                                 return (
                                     <div class="card" key={item._id}>
                                         <div class="card-front">
-
+                                            <h1 className='project-img-title'>{item.title}</h1>
                                             <img src={item.img} alt={item.alt} />
                                         </div>
                                         <div class="card-back">
+                                        <h1 className='project-img-title'>{item.title}</h1>
                                             <ul>
-                                                <li>{item.des1}</li>
-                                                <li>{item.des2}</li>
-                                                <li>{item.des1}</li>
-                                                <li>{item.des2}</li>
+                                                <li className='project-description'>&#8226; {item.des1}</li>
+                                                <li className='project-description'>&#8226; {item.des2}</li>
+                                                <li className='project-description'>&#8226; {item.des3}</li>
+                                                <li className='project-description'>&#8226; {item.des4}</li>
                                             </ul>
                                         </div>
                                     </div>
