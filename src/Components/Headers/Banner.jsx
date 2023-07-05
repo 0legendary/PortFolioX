@@ -53,6 +53,7 @@ function Banner() {
                   Download CV
                 </a>
               </button>
+
             </div>
 
           </div>

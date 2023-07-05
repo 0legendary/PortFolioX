@@ -95,7 +95,7 @@ function Projects() {
                                             <img src={item.img} alt={item.alt} />
                                         </div>
                                         <div class="card-back">
-                                        <h1 className='project-img-title'>{item.title}</h1>
+                                        <h1 className='project-img-title' style={{color: "black"}}>{item.title}</h1>
                                             <ul>
                                                 <li className='project-description'>&#8226; {item.des1}</li>
                                                 <li className='project-description'>&#8226; {item.des2}</li>

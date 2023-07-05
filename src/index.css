@@ -10,6 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Electrolize&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,200&family=Great+Vibes&family=Orbitron&family=Pinyon+Script&family=Ysabeau+SC:wght@300&display=swap');
 
+
 body {
   margin: 0;
 }
@@ -117,6 +118,11 @@ body {
   color: rgb(255, 255, 255);
   transform: scale(1.1);
 }
+.active{
+  color: rgb(255, 255, 255) !important;
+  transform: scale(1.2);
+} 
+
 
 .header-hire {
   padding: 13px 35px;
@@ -146,6 +152,122 @@ body {
   transition: 0.1s ease-in;
   color: green;
 }
+
+
+
+
+.menu {
+  position: relative;
+  margin-right: 2.5rem;
+  margin-top: -4.5rem;
+}
+
+.menu span {
+  position: absolute;
+  background-color: black;
+  padding: 15px 10px;
+  border: 3px solid white;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu span.hidden {
+  visibility: hidden;
+}
+
+.menu span:last-child {
+  padding: 9px 11px;
+}
+
+.menu span:nth-child(1) {
+  background-color: lightblue;
+  padding: 6px 6px;
+  transform: rotate(0deg) translate(-85px) rotate(0deg);
+  transition: transform 0.7s ease-in-out;
+  width: 42px;
+  height: 42px;
+}
+
+.menu span:nth-child(1).show {
+  animation: rotateAnimation1 0.7s ease-in-out;
+}
+@keyframes rotateAnimation1 {
+  0% {
+    transform: rotate(0deg) translate(0px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg) translate(-85px) rotate(0deg);
+  }
+}
+
+
+.menu span:nth-child(2) {
+  background-color: darkblue;
+  transform: rotate(-32deg) translate(-85px) rotate(33deg);
+  transition: transform 0.7s ease-in-out;
+  padding: 6px 6px;
+  width: 42px;
+  height: 42px;
+}
+
+.menu span:nth-child(2).show {
+  animation: rotateAnimation2 0.7s ease-in-out;
+}
+@keyframes rotateAnimation2 {
+  0% {
+    transform: rotate(0deg) translate(0px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(-32deg) translate(-85px) rotate(33deg);
+  }
+}
+
+
+
+.menu span:nth-child(3) {
+  background-color: red;
+  transform: rotate(-63.2deg) translate(-85px) rotate(58deg);
+  transition: transform 0.7s ease-in-out;
+  padding: 6px 6px;
+  width: 42px;
+  height: 42px;
+}
+
+.menu span:nth-child(3).show {
+  animation: rotateAnimation3 0.7s ease-in-out;
+  
+}
+@keyframes rotateAnimation3 {
+  0% {
+    transform: rotate(0deg) translate(0px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(-63.2deg) translate(-85px) rotate(58deg);
+  }
+}
+
+
+.menu span:nth-child(4) {
+  background-color: red;
+  transform: rotate(-94deg) translate(-85px) rotate(90deg);
+  transition: transform 0.7s ease-in-out;
+  padding: 6px 6px;
+  width: 42px;
+  height: 42px;
+}
+.menu span:nth-child(4).show {
+  animation: rotateAnimation4 0.7s ease-in-out;
+  
+}
+@keyframes rotateAnimation4 {
+  0% {
+    transform: rotate(0deg) translate(0px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(-94deg) translate(-85px) rotate(90deg);
+  }
+}
+
 
 
 
@@ -233,10 +355,11 @@ body {
   outline: none;
   cursor: pointer;
   position: relative;
+  border: 1px solid #dadada 
 }
 
 .banner-btn:before {
-  content: "";
+  
   position: absolute;
   left: 0;
   top: 0;
@@ -248,7 +371,7 @@ body {
 }
 
 .banner-btn:after {
-  content: "";
+  
   position: absolute;
   left: 3px;
   top: 3px;
@@ -852,6 +975,8 @@ svg circle:nth-child(2) {
   stroke: #00ff43;
 }
 
+
+
 /* Projects Section */
 .projects {
   width: 100%;
@@ -924,10 +1049,11 @@ svg circle:nth-child(2) {
 }
 
 .card-back {
-  transform: translateX(120%);
-  transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
-  padding-top: 2rem;
+  transform: translateY(120%);
+  transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860),opacity 1s ease-in-out;
+  /* padding-top: 2rem; */
   filter: blur(1px);
+  opacity: 0;
 }
 .project-description{
   font-size: large;
@@ -936,18 +1062,20 @@ svg circle:nth-child(2) {
 }
 /*Hover*/
 .card:hover {
-  background-color: #1b1b1b25;
+  background-color: #dedede80;
 }
 
 .card:hover .card-front {
-  transform: translateY(110%);
+  transform: translateY(-110%);
   filter: blur(1px);
 }
 
 .card:hover .card-back {
   transform: translateY(0);
-  padding-top:2rem ;
+  /* padding-top:2rem ; */
   filter: blur(0px);
+  opacity: 1;
+  transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860),opacity 1s ease-in-out;
   
 }
 
@@ -968,7 +1096,6 @@ svg circle:nth-child(2) {
   margin: 2px auto;
   background-color: #1b1b1b;
 }
-
 
 
 
