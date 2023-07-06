@@ -3,12 +3,15 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { Biography} from "../../Assets"
+import { Biography } from "../../Assets"
 
 
 function About() {
     return (
-        <div>
+        <div className='about-page-container-home'>
+            <div id='stars'></div>
+            <div id='stars2'></div>
+            <div id='stars3'></div>
             <section className='about'>
                 <div className='about-div'>
                     <div className='about-image'>
@@ -22,21 +25,24 @@ function About() {
                             presence that will leave a lasting impression."
                         </p>
                         <div class="my-info">
-                            <div class="single-info"><span>Name:</span>
-                                <p>Alen.m</p>
+                            <div class="single-info"><span>Name: Alen.m</span>
+                                <p></p>
                             </div>
-                            <div class="single-info"><span>From:</span>
-                                <p>Kerala, India</p>
-                            </div>
-                            <div class="single-info"><span>Email:</span>
-                                <p><a href="mailto:alenmullassery123@gmail.com">alenmullassery123@gmail.com</a></p>
-                            </div>
-                            <div class="single-info"><span>Phone:</span>
-                                <p><a href="tel:+91 9961689333">9961689333</a></p>
+                            <div class="single-info"><span>From: Kerala, Calicut</span>
+                                <p></p>
                             </div>
                             <div class="single-info">
-                                <p>Education: Plus One</p>
+                                <span>Email: 
+                                 <a href="bitsandbytes.alen@gmail.com">  bitsandbytes.alen@gmail.com</a>
+                                </span>
+                                <p></p>
                             </div>
+                            <div class="single-info"><span>Phone: <a href="tel:+91 9961689333">  9961689333</a></span>
+                                <p></p>
+                            </div>
+                            {/* <div class="single-info">
+                                <p>Education: Plus One</p>
+                            </div> */}
                         </div>
                         <div>
                             <ul className='about-social-media'>
@@ -61,8 +67,8 @@ function About() {
                     </div>
                 </div>
             </section>
-            
-            
+
+
         </div>
     )
 }

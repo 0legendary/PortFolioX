@@ -4,12 +4,22 @@ import MoreIcon from "./png/icons/service-icon.png"
 import BrototypeLogo from "./png/icons/actvity-logo.png"
 import CompanyLogo from "./png/icons/company-logo.png"
 import ExpoLogo from "./png/icons/expo-icon.png"
-import PortFolio from "./png/Projects/html-website.png"
 import PXlogoW from "./png/icons/PX-logo.png"
 import PXlogoB from "./png/icons/PX-logo-black.png"
 import developing from "./png/background-img/developing.jpg"
 import discussing from "./png/background-img/discussion.jpg"
 import finished from "./png/background-img/finished.jpg"
+import TinkerHub from "./png/icons/TinkerHub.png"
+import KeralaJs from "./png/icons/Kerala-JS.png"
+import AWS from "./png/icons/AWS.png"
+
+
+import PersonalWebpic from "./png/Projects/Personal-website-pic.png"
+import NetflixClonePic from "./png/Projects/NETFLIX-clone-pic.png"
+import AamazoneClonePic from "./png/Projects/amazon-clone-pic.png"
+import ToDoList from "./png/Projects/To-Do-List.png"
+import OXLclonePic from "./png/Projects/OLX-clone-pic.png"
+
 
 import avt1 from "./png/Avatar/man.png"
 import avt2 from "./png/Avatar/man2.png"
@@ -24,7 +34,6 @@ export{
     BrototypeLogo,
     CompanyLogo,
     ExpoLogo,
-    PortFolio,
     PXlogoW,
     PXlogoB,
     developing,
@@ -37,5 +46,13 @@ export{
     avt5,
     avt6,
     avt7,
+    TinkerHub,
+    KeralaJs,
+    AWS,
+    NetflixClonePic,
+    AamazoneClonePic,
+    ToDoList,
+    PersonalWebpic,
+    OXLclonePic
     
 };

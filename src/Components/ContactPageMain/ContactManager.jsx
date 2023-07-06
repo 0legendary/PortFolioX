@@ -93,7 +93,7 @@ function ContactManager() {
     <div>
       <div>
         <div className='about-page'>
-          <h1 className='about-page-heading btn-shine'>CONTACT</h1>
+          <h1 className='about-page-heading btn-shine-contact'>CONTACT</h1>
           <h1 className='about-page-subheading'>
             <span><Link to="/">Home</Link></span>
             <ArrowForwardIosIcon className='ab-p-span' />
