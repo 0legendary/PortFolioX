@@ -3,7 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Akronim&family=Cormorant+SC:wght@300&family=Playball&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Fanwood+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grandiflora+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Electrolize&display=swap');
 body {
   margin: 0;
 }
@@ -870,7 +874,9 @@ svg circle:nth-child(2) {
 
 /* Footer Section */
 .footer-section {
-  background: linear-gradient(to top, #000000, #fffcf4);
+  background: linear-gradient(to right, #1a1a1a 0%, #333333 19%, #4d4d4d 40%, #666666 60%, #808080 83%, #1a1a1a 100%);
+  background-size: 10000px 100%;
+  animation: bg 20s linear infinite;
   width: 100%;
 }
 
@@ -1202,6 +1208,12 @@ svg circle:nth-child(2) {
   font-family: "Lato";
   font-weight: 400;
 }
+.comment-heading-form{
+  color: white;
+  font-size: x-large;
+  padding-bottom: 1rem;
+  font-family: 'Yellowtail', cursive;
+}
 
 .form-group {
   padding-bottom: 1rem;
@@ -1474,15 +1486,83 @@ textarea.form-control {
 
 /* Comment Section */
 
-.comment-section{
-  width: 100%;
-      background: #1b1b1b;
+
+/* Loading Animation */
+.gooey {
+  left: 50%;
+  width: 142px;
+  height: 40px;
+  margin: -20px 0 0 -71px;
+  background: rgb(0, 0, 0);
+  filter: contrast(20);
+  margin-left: 50%;
+
 }
-.comment-container{
+
+.dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 15px;
+  filter: blur(4px);
+  background: #ffffff;
+  border-radius: 50%;
+  transform: translateX(0);
+  animation: dot 2.8s infinite;
+  margin-top: 5px;
+}
+
+.dots {
+  transform: translateX(0);
+  margin-top: 12px;
+  margin-left: 31px;
+  animation: dots 2.8s infinite;
+}
+
+.dots-span {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  filter: blur(4px);
+  background: #ffffff;
+  border-radius: 50%;
+  margin-top: 5px;
+}
+
+
+@keyframes dot {
+  50% {
+    transform: translateX(96px);
+  }
+
+}
+
+@keyframes dots {
+  50% {
+    transform: translateX(-31px)
+  }
+
+}
+
+/* Comment Box */
+.comment-section {
+  width: 100%;
+  background: #020101;
+}
+
+
+
+.comment-container {
   max-width: 50%;
   margin: auto;
   padding: 2rem;
   color: white;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+
+
 }
 
 .comment {
@@ -1491,12 +1571,15 @@ textarea.form-control {
   margin-bottom: 10px;
   transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
   border-radius: 20px;
+
 }
 
 .comment:hover {
   transform: translateY(-5px);
   box-shadow: rgba(225, 225, 225, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-}.name-email-container {
+}
+
+.name-email-container {
   display: flex;
   align-items: center;
 }
@@ -1510,12 +1593,14 @@ textarea.form-control {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+
 }
 
 .name {
   margin-left: 20px;
   text-transform: capitalize;
-  font-size: large;
+  font-family: 'Grandiflora One', serif;
+  font-size: 25px;
 }
 
 .contact-email-comment {
@@ -1528,46 +1613,38 @@ textarea.form-control {
 .contact-email-comment a {
   text-align: right;
   padding-right: 1rem;
-  color: #7e7e7e;
+  color: #8d8d8d;
+  font-family: 'Playball';
+  transition: 0.3s ease-in;
 }
-.contact-email-comment a:hover{
+
+.contact-email-comment a:hover {
   color: white;
 }
 
-.align{
+.align {
   margin-left: 67px !important;
   margin-right: 8px !important;
   margin: auto;
 }
 
 
-  
+
 .message {
-  margin-top: 6px;
+  margin-top: 1rem;
   margin-left: 0px;
-}
-.icons-container{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: space-between;
-  justify-content: space-between;
-
-}
-.like-dislike{
-  display: flex;
-  text-align: left;
-  margin-top: 10px;
-}
-.like-icon{
-  margin-right: 1rem;
+  margin-bottom: 1rem;
+  font-family: 'Fanwood Text', serif;
+  font-size: 19px;
 }
 
-.reply-container {
-  margin-top: 10px;
-  text-align: right;
+.comment-date{
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  padding-right: 3px;
+  padding-bottom: 2px;
+  color:#707070;
+  font-family: 'Electrolize', sans-serif;
 }
-.reply-icon{
-  font-size: xx-large !important;
-  
-}
+

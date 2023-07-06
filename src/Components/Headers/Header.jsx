@@ -54,9 +54,16 @@ function Header() {
             </li>
 
             <li>
+
               <button className='header-hire'>
-                <span className='header-hire-me'>Hire me</span>
+                <a className='header-hire-me'
+                  href="https://drive.google.com/file/d/1WBJaSH8hx1nGVcysdWC-2W1QzIgfM88Z/view?usp=drive_link"
+                  target="_blank" rel="noopener noreferrer">
+                  Get Resume
+                </a>
               </button>
+
+
             </li>
           </ul>
         </div>

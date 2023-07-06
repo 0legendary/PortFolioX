@@ -26,7 +26,8 @@ function Footer() {
                 <a href="tel:+91 9961689333"><CallIcon />+91 9961689333</a>
               </li>
               <li>
-                <a href="mailto:alenmullassery123@gmail.com"><EmailIcon /> alenmullassery123@gmail.com</a>
+                <a href="mailto:bitsandbytes.alen@gmail.com"><EmailIcon /> bitsandbytes.alen@gmail.com
+                </a>
               </li>
               <li><LocationOnIcon /> Calicut</li>
             </ul>
