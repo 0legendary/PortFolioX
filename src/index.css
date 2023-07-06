@@ -1906,3 +1906,43 @@ textarea.form-control {
   font-family: 'Electrolize', sans-serif;
 }
 
+
+
+/* Banner Fro Mobile Devices */
+@media (max-width: 768px) {
+  .Banner {
+    background: linear-gradient(to bottom, grey, black);
+    background-size: cover;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .banner-name {
+    font-size: 1.5rem;
+    padding-top: 10%;
+  }
+
+  .banner-skills {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .skills {
+    min-height: 80px;
+  }
+
+  .banner-des {
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 100%;
+    margin-bottom: 2%;
+  }
+
+  .banner-btn {
+    padding: 8px 20px;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 2%;
+  }
+}
+
