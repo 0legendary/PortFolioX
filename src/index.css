@@ -1911,20 +1911,32 @@ textarea.form-control {
 /* Banner Fro Mobile Devices */
 @media (max-width: 768px) {
   .Banner {
-    background: linear-gradient(to bottom, grey, black);
+    background: linear-gradient(to right, #1b191f 0%, #241e29 19%, #2d2a35 40%, #393c42 60%, #4c4f59 83%, #1b191f 100%);
+    background-size: 10000px 100%;
+    animation: bg 15s linear infinite;
     background-size: cover;
     padding-left: 0;
     padding-right: 0;
+    background-size: 10000px 100%;
+    
   }
 
   .banner-name {
     font-size: 1.5rem;
-    padding-top: 10%;
+    padding-top: 26%;
+    padding-left: 1rem;
   }
 
   .banner-skills {
     font-size: 40px;
     line-height: 40px;
+    padding-left: 1rem;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 900;
+    color: transparent;
+    background: none;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
   }
 
   .skills {
@@ -1936,13 +1948,57 @@ textarea.form-control {
     line-height: 20px;
     max-width: 100%;
     margin-bottom: 2%;
+    padding-left: 1rem;
   }
 
   .banner-btn {
     padding: 8px 20px;
+    margin-left: 1rem;
+    margin-top: 1rem;
     font-size: 12px;
     line-height: 20px;
-    margin-bottom: 2%;
+    margin-bottom: 6%;
+  }
+}
+
+/* Styles of Banner for mobile devices */
+@media (max-width: 768px) {
+  .about-div {
+    flex-direction: column;
+    max-width: 86%;
+  }
+
+  .about-image {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    min-width: 0;
+  }
+
+  .about-bio {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-quote-text {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .about-text1 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .my-info {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+
+  .about-social-media {
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
   }
 }
 
