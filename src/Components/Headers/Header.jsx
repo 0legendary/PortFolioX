@@ -1,11 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import { PXlogoB } from "../../Assets"
 import { Link, useLocation } from 'react-router-dom';
+import HomeIcon from '@mui/icons-material/Home';
+import ComputerIcon from '@mui/icons-material/Computer';
+import HandymanIcon from '@mui/icons-material/Handyman';
+import ContactMailIcon from '@mui/icons-material/ContactMail';
+
 import $ from 'jquery';
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
+
+
+  
   useEffect(() => {
     const handleScroll = () => {
       if (window.pageYOffset > 0) {
@@ -21,7 +29,9 @@ function Header() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
   
+
   useEffect(() => {
     const handleClick = () => {
       $('.menu span').not(':last-child').toggleClass('hidden show');
@@ -49,12 +59,20 @@ function Header() {
         </div>
 
         <div class="menu lg:hidden ">
-          <span class="fa fa-twitter fa-2x fa-inverse f-fw hidden"></span>
-          <span class="fa fa-facebook fa-2x fa-inverse fa-fw hidden"></span>
-          <span class="fa fa-pinterest fa-2x fa-inverse fa-fw hidden"></span>
-          <span class="fa fa-pinterest fa-2x fa-inverse fa-fw hidden"></span>
-          <span class="fa fa-bars fa-1.5x fa-inverse f-fw"></span>
           
+            <div className='res-icon1'><span class="fa hidden"><HomeIcon /> </span></div>
+          
+          
+            <div className='res-icon2'><span class="fa  hidden"><ComputerIcon /></span></div>
+          
+          
+            <div className='res-icon3'><span class="fa  hidden"><HandymanIcon /> </span></div>
+          
+          
+          <div className='res-icon4'><span class="fa  hidden"><ContactMailIcon /> </span></div>
+          
+
+          <span class="fa fa-bars fa-1.5x fa-inverse f-fw"></span>
         </div>
 
         <div className='header-div-pages hidden lg:block'>
@@ -89,7 +107,7 @@ function Header() {
                   target="_blank" rel="noopener noreferrer">
                   Get Resume
                 </a>
-                
+
               </button>
             </li>
           </ul>

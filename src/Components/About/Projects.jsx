@@ -17,7 +17,7 @@ function Projects() {
                 <div className='working-container'>
 
                     <div className="container">
-                        <div className="card">
+                        <div className="card-box">
                             <div className="box">
                                 <div className="percent">
                                     <svg>
@@ -34,7 +34,7 @@ function Projects() {
                     </div>
 
                     <div className="container">
-                        <div className="card">
+                        <div className="card-box">
                             <div className="box">
                                 <div className="percent">
                                     <svg>
@@ -51,7 +51,7 @@ function Projects() {
                     </div>
 
                     <div className="container">
-                        <div className="card">
+                        <div className="card-box">
                             <div className="box">
                                 <div className="percent">
                                     <svg>
@@ -68,7 +68,7 @@ function Projects() {
                     </div>
 
                     <div className="container">
-                        <div className="card">
+                        <div className="card-box">
                             <div className="box">
                                 <div className="percent">
                                     <svg>
