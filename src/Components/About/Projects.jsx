@@ -3,6 +3,14 @@ import React from 'react'
 import { projectDescription } from '../../Constants';
 
 function Projects() {
+    
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+      card.addEventListener('mouseleave', () => {
+        card.scrollTop = 0;
+      });
+    });
     return (
         <div>
             <section className='working-details'>
@@ -94,7 +102,7 @@ function Projects() {
                                             <h1 className='project-img-title'>{item.title}</h1>
                                             <img src={item.img} alt={item.alt} />
                                         </div>
-                                        <div class="card-back">
+                                        <div className="card-back">
                                         <h1 className='project-img-title' style={{color: "black"}}>{item.title}</h1>
                                             <ul>
                                                 <li className='project-description'>&#8226; {item.des1}</li>
