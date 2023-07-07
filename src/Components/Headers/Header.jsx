@@ -10,6 +10,7 @@ import $ from 'jquery';
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const [isMenuShown, setIsMenuShown] = useState(false);
 
 
 
@@ -34,7 +35,7 @@ function Header() {
 
   useEffect(() => {
     const handleClick = () => {
-      $('.menu span').not(':last-child').toggleClass('hidden show');
+      setIsMenuShown((prevState) => !prevState);
     };
 
     $('.menu span:last-child').click(handleClick);
@@ -58,21 +59,32 @@ function Header() {
           <h1 class={` logo-name ${isScrolled ? 'scrolled' : ''}`}>PortFolioX</h1>
         </div>
 
-        <div class="menu lg:hidden ">
-          
-            <div className='res-icon1'><span class="fa hidden"><HomeIcon /> </span></div>
-          
-          
-            <div className='res-icon2'><span class="fa  hidden"><ComputerIcon /></span></div>
-          
-          
-            <div className='res-icon3'><span class="fa  hidden"><HandymanIcon /> </span></div>
-          
-          
-          <div className='res-icon4'><span class="fa  hidden"><ContactMailIcon /> </span></div>
-          
+        <div className="menu lg:hidden">
+          <span className={`fa ${isMenuShown ? 'show' : 'hidden'}`}>
+            <Link to="/">
+              <HomeIcon />
+            </Link>
+          </span>
 
-          <span class="fa fa-bars fa-1.5x fa-inverse f-fw"></span>
+          <span className={`fa ${isMenuShown ? 'show' : 'hidden'}`}>
+            <Link to="/about">
+              <ComputerIcon />
+            </Link>
+          </span>
+
+          <span className={`fa ${isMenuShown ? 'show' : 'hidden'}`}>
+            <Link to="/service">
+              <HandymanIcon />
+            </Link>
+          </span>
+
+          <span className={`fa ${isMenuShown ? 'show' : 'hidden'}`}>
+            <Link to="/contact">
+              <ContactMailIcon />
+            </Link>
+          </span>
+
+          <span className="fa fa-bars fa-1.5x fa-inverse f-fw"></span>
         </div>
 
         <div className='header-div-pages hidden lg:block'>
