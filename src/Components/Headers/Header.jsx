@@ -49,6 +49,7 @@ function Header() {
   const isActive = (pathname) => {
     return location.pathname === pathname ? 'active' : '';
   };
+  
 
   return (
     <div>
@@ -60,25 +61,25 @@ function Header() {
         </div>
 
         <div className="menu lg:hidden">
-          <span className={`fa ${isMenuShown ? 'show' : 'hidden'}`}>
+          <span className={`fa ${isMenuShown ? 'show' : 'hidden'} ${ isActive('/')}`}>
             <Link to="/">
               <HomeIcon />
             </Link>
           </span>
 
-          <span className={`fa ${isMenuShown ? 'show' : 'hidden'}`}>
+          <span className={`fa ${isMenuShown ? 'show' : 'hidden'} ${ isActive('/about')}`}>
             <Link to="/about">
               <ComputerIcon />
             </Link>
           </span>
 
-          <span className={`fa ${isMenuShown ? 'show' : 'hidden'}`}>
+          <span className={`fa ${isMenuShown ? 'show' : 'hidden'} ${ isActive('/service')}`}>
             <Link to="/service">
               <HandymanIcon />
             </Link>
           </span>
 
-          <span className={`fa ${isMenuShown ? 'show' : 'hidden'}`}>
+          <span className={`fa ${isMenuShown ? 'show' : 'hidden'} ${ isActive('/contact')}`}>
             <Link to="/contact">
               <ContactMailIcon />
             </Link>
