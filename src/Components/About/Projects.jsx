@@ -1,22 +1,33 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
 import { projectDescription } from '../../Constants';
 
 function Projects() {
     
-    const cards = document.querySelectorAll('.card');
-
-    cards.forEach(card => {
-      card.addEventListener('mouseleave', () => {
-        card.scrollTop = 0;
-      });
-    });
+    useEffect(() => {
+        const handleMouseLeave = (event) => {
+          const card = event.currentTarget;
+          card.scrollTop = 0;
+        };
+      
+        const cards = document.querySelectorAll('.card');
+        cards.forEach((card) => {
+          card.addEventListener('mouseleave', handleMouseLeave);
+        });
+      
+        return () => {
+          cards.forEach((card) => {
+            card.removeEventListener('mouseleave', handleMouseLeave);
+          });
+        };
+      }, []);
+      
     return (
         <div>
             <section className='working-details'>
                 <div className='working-container'>
 
-                    <div className="container">
+                    <div className="container unused">
                         <div className="card-box">
                             <div className="box">
                                 <div className="percent">
@@ -50,7 +61,7 @@ function Projects() {
                         </div>
                     </div>
 
-                    <div className="container">
+                    <div className="container unused">
                         <div className="card-box">
                             <div className="box">
                                 <div className="percent">

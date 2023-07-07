@@ -48,11 +48,12 @@ function Banner() {
               </Link>
 
               <button className='banner-btn'>
-                <a href="https://drive.google.com/file/d/1WBJaSH8hx1nGVcysdWC-2W1QzIgfM88Z/view?usp=drive_link"
+                <a href="https://drive.google.com/file/d/1rfB8WNLehh0UdUKPjo4RGTB5LW5tqlhP/view?usp=sharing"
                   target="_blank" rel="noopener noreferrer">
                   Download CV
                 </a>
               </button>
+              
 
             </div>
 

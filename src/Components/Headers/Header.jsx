@@ -27,13 +27,24 @@ function Header() {
         }
       }
     };
-
+  
+    const handleClickOutsideMenu = (event) => {
+      const menuIcons = document.querySelector('.menu span:last-child');
+  
+      if (menuIcons && !menuIcons.contains(event.target)) {
+        setIsMenuShown(false);
+      }
+    };
+  
     window.addEventListener('scroll', handleScroll);
-
+    window.addEventListener('mousedown', handleClickOutsideMenu);
+  
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('mousedown', handleClickOutsideMenu);
     };
   }, [isMenuShown]);
+  
   
 
 
@@ -120,7 +131,7 @@ function Header() {
             <li>
               <button className='header-hire'>
                 <a className='header-hire-me'
-                  href="https://drive.google.com/file/d/1WBJaSH8hx1nGVcysdWC-2W1QzIgfM88Z/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1rfB8WNLehh0UdUKPjo4RGTB5LW5tqlhP/view?usp=sharing"
                   target="_blank" rel="noopener noreferrer">
                   Get Resume
                 </a>

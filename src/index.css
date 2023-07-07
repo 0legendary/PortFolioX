@@ -57,7 +57,7 @@ body {
   text-decoration: none;
   white-space: nowranavbar-collapsep;
   font-size: 32px;
-  background: linear-gradient(to top, #636363, black);
+  background: linear-gradient(to top, #a8a8a8, black);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 600;
@@ -323,12 +323,13 @@ body {
   margin-right: auto;
 }
 
-
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 
 .banner-name {
   color: #fff;
   font-size: xx-large;
   padding-top: 10%;
+  font-family: 'Fredericka the Great', cursive;
 }
 
 .banner-skills {
@@ -433,8 +434,10 @@ body {
   overflow: hidden;
   height: 100%;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
+
 
 #stars {
   width: 1px;
@@ -524,7 +527,7 @@ body {
   width: 40%;
   margin-right: 2rem;
   min-width: 40%;
-  z-index: 1;
+  z-index: -1;
 }
 
 .about-bio {
@@ -550,6 +553,8 @@ body {
   text-transform: capitalize;
   color: #b1b1b1;
   font-family: Lucida Console;
+  padding-top: 1rem;
+  
 }
 
 .about-text1 {
@@ -692,10 +697,13 @@ body {
   font-family: 'Courier New', Courier, monospace;
   padding-top: 2rem;
   padding-bottom: 1.5rem;
+  transition: transform 0.3s, color 0.3s;
 }
 
 .service-more:hover {
   cursor: pointer;
+  transform: perspective(100px) translateX(0px) rotateX(0deg) rotateY(0deg) scale(1.03);
+  color: white;
 }
 
 .next-page {
@@ -1155,10 +1163,10 @@ svg circle:nth-child(2) {
 }
 
 .footer-logo {
+  background: linear-gradient(to top, #939393, black);
   text-decoration: none;
   white-space: nowranavbar-collapsep;
   font-size: 32px;
-  background: linear-gradient(to top, #decbcb, black);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 600;
@@ -1208,6 +1216,7 @@ svg circle:nth-child(2) {
   background-color: #676767;
   opacity: 0 !important;
   transition: opacity 1.5s !important;
+  transition: color 0.3s, background-color 0.3s !important;
 }
 
 .scroll-icon.scrolled {
@@ -1221,6 +1230,12 @@ svg circle:nth-child(2) {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: color 0.3s, background-color 0.3s !important;
+}
+.scroll-icon:hover{
+  color: white !important;
+  background-color: black;
+  transition: color 0.5s, background-color 0.5s !important;
 }
 
 
@@ -1572,6 +1587,7 @@ textarea {
   list-style-type: none;
   margin-left: -9px;
   padding-right: 0px;
+ margin-top: 3rem;
 }
 
 .list-item {
@@ -1823,6 +1839,7 @@ textarea.form-control {
 }
 
 
+
 @keyframes dot {
   50% {
     transform: translateX(96px);
@@ -1941,8 +1958,15 @@ textarea.form-control {
 
 
 
-/* Banner Fro Mobile Devices */
+/* Banner For Mobile Devices */
 @media (max-width: 768px) {
+  .about-page{
+    padding-top: 10rem;
+    padding-bottom: 3rem;
+  }
+  .about-page-subheading {
+    padding-top: 1rem;
+  }
   .Banner {
     background: linear-gradient(to right, #1b191f 0%, #241e29 19%, #2d2a35 40%, #393c42 60%, #4c4f59 83%, #1b191f 100%);
     background-size: 10000px 100%;
@@ -1956,7 +1980,8 @@ textarea.form-control {
 
   .banner-name {
     font-size: 1.5rem;
-    padding-top: 26%;
+    padding-top: 30%;
+    padding-bottom: 0.3rem;
     padding-left: 1rem;
   }
 
@@ -1964,7 +1989,8 @@ textarea.form-control {
     font-size: 40px;
     line-height: 40px;
     padding-left: 1rem;
-    font-family: 'Dosis', sans-serif;
+    /* font-family: 'Dosis', sans-serif; */
+    font-family: 'Baskervville', serif;
     font-weight: 900;
     color: transparent;
     background: none;
@@ -2014,8 +2040,9 @@ textarea.form-control {
   }
 
   .about-quote-text {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 32px;
+    font-family: 'Bruno Ace SC', cursive;
   }
 
   .about-text1 {
@@ -2108,6 +2135,9 @@ textarea.form-control {
     z-index: 1;
     position: relative;
 
+  }
+  .unused{
+    display: none !important;
   }
 
   .working-container {
@@ -2353,6 +2383,10 @@ textarea.form-control {
     flex-direction: column;
     gap: 0rem;
     text-align: center;
+    display: none;
+  }
+  .footer-location{
+    display: none;
   }
 
   .logo-div {
@@ -2365,6 +2399,21 @@ textarea.form-control {
   .logo-name {
     font-size: 28px;
   }
+  .footer-name-div {
+    justify-content: center;
+    padding-top: 0rem;
+    padding-bottom: 2rem;
+}
+.footer-logo{
+  background: linear-gradient(to top, #e7e7e7, #3e3e3e);
+  text-decoration: none;
+  white-space: nowranavbar-collapsep;
+  font-size: 32px;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  font-family: 'Fredericka the Great', cursive;
+}
 
   .footer-mob-num {
     display: none;
@@ -2378,6 +2427,7 @@ textarea.form-control {
 
   .about-social-media-footer {
     justify-content: center;
+    padding-top: 6px;
   }
 
   .scroll-icon-container {
@@ -2431,6 +2481,12 @@ textarea.form-control {
   .form-horizontal {
     max-width: 100%;
   }
+  .contact-body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    padding-bottom: 27px;
+}
 
   .comment-heading-form {
     font-size: large;
@@ -2466,6 +2522,7 @@ textarea.form-control {
 
   .contact-list {
     margin-left: 0;
+    margin-top: 0rem;
   }
 
   .list-item {
@@ -2525,3 +2582,159 @@ textarea.form-control {
     color: #000;
   }
 }
+
+/* Loading Animation */
+@media (max-width: 767px) {
+
+.gooey {
+  left: 50%;
+  width: 142px;
+  height: 40px;
+  margin: -20px 0 0 -71px;
+  background: rgb(0, 0, 0);
+  filter: contrast(20);
+  margin-left: 30%;
+
+}
+
+.dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 15px;
+  filter: blur(4px);
+  background: #ffffff;
+  border-radius: 50%;
+  transform: translateX(0);
+  animation: dot 2.8s infinite;
+  margin-top: 5px;
+}
+
+.dots {
+  transform: translateX(0);
+  margin-top: 12px;
+  margin-left: 31px;
+  animation: dots 2.8s infinite;
+}
+
+.dots-span {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  filter: blur(4px);
+  background: #ffffff;
+  border-radius: 50%;
+  margin-top: 5px;
+}
+
+
+@keyframes dot {
+  50% {
+    transform: translateX(96px);
+  }
+
+}
+
+@keyframes dots {
+  50% {
+    transform: translateX(-31px)
+  }
+
+}
+}
+@media (max-width: 767px) {
+  .comment-section {
+  width: 100%;
+  background: #020101;
+  }
+  
+  .comment-container {
+  max-width: 100%;
+  margin: auto;
+  padding: 2rem;
+  color: white;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  }
+  
+  .comment {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  border-radius: 20px;
+  }
+  
+  .comment:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(225, 225, 225, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+  
+  .name-email-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  }
+  
+  .avatar-name-container {
+  display: flex;
+  align-items: center;
+  }
+  
+  .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  }
+  
+  .name {
+  margin-left: 10px;
+  text-transform: capitalize;
+  font-family: 'Grandiflora One', serif;
+  font-size: 25px;
+  }
+  
+  .contact-email-comment {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+  
+  .contact-email-comment a {
+  text-align: right;
+  padding-right: 0rem;
+  color: #8d8d8d;
+  font-family: 'Playball';
+  transition: 0.3s ease-in;
+  }
+  
+  .contact-email-comment a:hover {
+  color: white;
+  }
+  
+  .align {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  }
+  
+  .message {
+  margin-top: 1rem;
+  margin-left: 0px;
+  margin-bottom: 1rem;
+  font-family: 'Fanwood Text', serif;
+  font-size: 19px;
+  }
+  
+  .comment-date {
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  padding-right: 3px;
+  padding-bottom: 2px;
+  color: #707070;
+  font-family: 'Electrolize', sans-serif;
+  }
+  }

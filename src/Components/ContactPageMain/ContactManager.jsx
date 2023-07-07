@@ -183,7 +183,6 @@ function ContactManager() {
       ) : (
 
         comments.map((comment, index) => (
-
           <div className='comment-section' key={index} >
             <div className='comment-container'>
               <div key={index} className="comment">

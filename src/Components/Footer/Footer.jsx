@@ -23,13 +23,13 @@ function Footer() {
           <div>
             <ul className='footer-personal-details'>
               <li>
-                <a className='footer-mob-num' href="tel:+91 9961689333"><CallIcon />+91 9961689333</a>
+                <a className='footer-mob-num' href="tel:+91 9961689333"><CallIcon />9961689333</a>
               </li>
-              <li>
+              <li className='footer-location'>
                 <a href="mailto:bitsandbytes.alen@gmail.com"><EmailIcon /> bitsandbytes.alen@gmail.com
                 </a>
               </li>
-              <li ><LocationOnIcon /> Calicut</li>
+              <li className='footer-location'><LocationOnIcon /> Calicut</li>
             </ul>
           </div>
 
