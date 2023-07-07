@@ -129,15 +129,15 @@ function ContactManager() {
               <div className="direct-contact-container">
                 <ul className="contact-list">
                   <li className="list-item"><i className="fa fa-map-marker fa-2x"><span className="contact-text place">Calicut, Kerala</span></i></li>
-                  <li className="list-item"><i className="fa fa-phone fa-2x"><span className="contact-text phone">Phone: (+91)9961689333</span></i></li>
-                  <li className="list-item"><i className="fa fa-envelope fa-2x"><a href='mailto:bitsandbytes.alen@gmail.com'><span className="contact-text gmail">Email: bitsandbytes.alen@gmail.com</span></a></i></li>
+                  <li className="list-item"><i className="fa fa-phone fa-2x"><a className="contact-text phone" href="tel:+91 9961689333">Phone: 9961689333</a></i></li>
+                  <li className="list-item"><i className="fa fa-envelope fa-2x"><a href='mailto:bitsandbytes.alen@gmail.com'><span className="contact-text gmail"><span className='contact-email-name'>Email:</span>bitsandbytes.alen@gmail.com</span></a></i></li>
                 </ul>
 
                 <div className='border-line-contact'>
                   <ul className="social-media-list">
                     <li onClick={() => window.open("https://github.com/0legendary", "_blank")}>
                       <a href="https://github.com/0legendary" className="contact-icon">
-                        <i className="fa fa-github" aria-hidden="true"></i>
+                        <i className="fa fa-github contact-git-icon" aria-hidden="true"></i>
                       </a>
                     </li>
                     <li onClick={() => window.open("https://twitter.com/_Alen_m_", "_blank")}>

@@ -17,10 +17,14 @@ function Header() {
   
   useEffect(() => {
     const handleScroll = () => {
-      if (window.pageYOffset > 0) {
-        setIsScrolled(true);
+      if (isMenuShown) {
+        setIsMenuShown(false);
       } else {
-        setIsScrolled(false);
+        if (window.pageYOffset > 0) {
+          setIsScrolled(true);
+        } else {
+          setIsScrolled(false);
+        }
       }
     };
 
@@ -29,9 +33,9 @@ function Header() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
-
+  }, [isMenuShown]);
   
+
 
   useEffect(() => {
     const handleClick = () => {
@@ -61,25 +65,25 @@ function Header() {
         </div>
 
         <div className="menu lg:hidden">
-          <span className={`fa ${isMenuShown ? 'show' : 'hidden'} ${ isActive('/')}`}>
+          <span className={`fa ${isMenuShown ? 'show' : 'hidden'} ${ isActive('/')} `}>
             <Link to="/">
               <HomeIcon />
             </Link>
           </span>
 
-          <span className={`fa ${isMenuShown ? 'show' : 'hidden'} ${ isActive('/about')}`}>
+          <span className={`fa ${isMenuShown ? 'show' : 'hidden'} ${ isActive('/about')} `}>
             <Link to="/about">
               <ComputerIcon />
             </Link>
           </span>
 
-          <span className={`fa ${isMenuShown ? 'show' : 'hidden'} ${ isActive('/service')}`}>
+          <span className={`fa ${isMenuShown ? 'show' : 'hidden'} ${ isActive('/service')} `}>
             <Link to="/service">
               <HandymanIcon />
             </Link>
           </span>
 
-          <span className={`fa ${isMenuShown ? 'show' : 'hidden'} ${ isActive('/contact')}`}>
+          <span className={`fa ${isMenuShown ? 'show' : 'hidden'} ${ isActive('/contact')} `}>
             <Link to="/contact">
               <ContactMailIcon />
             </Link>

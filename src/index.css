@@ -179,7 +179,7 @@ body {
 
 .menu span:hover {
   transform: translateZ(20px) scale(1.2);
-box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 
@@ -188,7 +188,7 @@ box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .menu span:last-child {
-  padding: 9px 11px;
+  padding: 6px 8px;
 }
 
 .menu span:nth-child(1) {
@@ -197,7 +197,7 @@ box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
   transition: transform 0.7s ease-in-out;
   width: 42px;
   height: 42px;
-  
+
 }
 
 .menu span:nth-child(1).show {
@@ -1548,6 +1548,7 @@ textarea {
   width: 400px;
   height: 34px;
   transition: all 0.2s ease-in-out;
+  text-align: center;
 }
 
 .send-text {
@@ -1569,7 +1570,7 @@ textarea {
 /* Location, Phone, Email Section */
 .contact-list {
   list-style-type: none;
-  margin-left: -64px;
+  margin-left: -9px;
   padding-right: 0px;
 }
 
@@ -2353,13 +2354,19 @@ textarea.form-control {
     gap: 0rem;
     text-align: center;
   }
+
   .logo-div {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    /* margin-left: 3%; */
+    margin-left: 0px;
   }
-  .footer-mob-num{
+
+  .logo-name {
+    font-size: 28px;
+  }
+
+  .footer-mob-num {
     display: none;
   }
 
@@ -2382,5 +2389,139 @@ textarea.form-control {
     width: 30px !important;
     height: 30px !important;
     font-size: 18px !important;
+  }
+}
+
+/* Responive of Service Page for Mobiel */
+@media (max-width: 768px) {
+  .service-card {
+    width: 117%;
+    margin-left: -27px;
+  }
+
+  .service-card-container {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .service-img-container {
+    height: 270px;
+  }
+
+}
+
+/* Responive of Contact Page for Mobiel */
+@media only screen and (max-width: 767px) {
+  #contact {
+    width: 100%;
+    height: 100%;
+  }
+
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    max-width: 100%;
+    padding-top: 5rem;
+  }
+
+  .form-horizontal {
+    max-width: 100%;
+  }
+
+  .comment-heading-form {
+    font-size: large;
+    padding-bottom: 1rem;
+  }
+
+  .form-group {
+    padding-bottom: 1rem;
+  }
+
+  .form-control,
+  textarea {
+    max-width: 100%;
+  }
+
+  .send-button {
+    width: 100%;
+  }
+  .alt-send-button {
+    width: 355px;
+    height: 34px;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+  }
+
+  .send-text {
+    margin-top: 10px;
+  }
+
+  .direct-contact-container {
+    max-width: 100%;
+  }
+
+  .contact-list {
+    margin-left: 0;
+  }
+
+  .list-item {
+    line-height: normal;
+  }
+
+  .gmail {
+    margin-left: 15px;
+  }
+
+  .place{
+    margin-left: 26px;
+  }
+  .phone{
+    margin-left: 21px;
+  }
+
+
+  .contact-email-name{
+    display: none;
+  }
+
+  textarea.form-control {
+    height: auto;
+  }
+
+  .contact-text a {
+    color: #bbb;
+    text-decoration: none;
+  }
+
+  .social-media-list li {
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    line-height: 40px;
+    font-size: 1.5rem;
+  }
+
+  .social-media-list li:after {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .social-media-list li:hover {
+    background-color: rgb(255, 255, 255);
+  }
+
+  .social-media-list li:hover:after {
+    opacity: 1;
+    transform: scale(1.12);
+    transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+  }
+
+  .social-media-list li:hover a {
+    color: #000;
   }
 }
