@@ -7,7 +7,7 @@ function Banner() {
 
   useEffect(() => {
     const options = {
-      strings: ['Web Designer', 'Web Developer', "React Developer"],
+      strings: ['UI/UX Designer', 'React.js Developer', "Backend Developer"],
       typeSpeed: 100,
       backSpeed: 50,
       showCursor: false,
