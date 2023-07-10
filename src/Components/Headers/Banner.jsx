@@ -7,7 +7,7 @@ function Banner() {
 
   useEffect(() => {
     const options = {
-      strings: ['UI/UX Designer', 'React.js Developer', "Backend Developer"],
+      strings: getTypedTexts(),
       typeSpeed: 100,
       backSpeed: 50,
       showCursor: false,
@@ -29,6 +29,15 @@ function Banner() {
     };
   }, []);
 
+  const getTypedTexts = () => {
+    if (window.innerWidth <= 768) {
+      // For mobile devices
+      return ['UI/UX Designer', 'React.js Dev.', 'Backend Dev.'];
+    } else {
+      // For laptop and desktop devices
+      return ['UI/UX Designer', 'React.js Developer', 'Backend Developer'];
+    }
+  };
   return (
     <div>
       <section className='Banner'>
