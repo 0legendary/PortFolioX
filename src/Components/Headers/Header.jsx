@@ -5,16 +5,17 @@ import HomeIcon from '@mui/icons-material/Home';
 import ComputerIcon from '@mui/icons-material/Computer';
 import HandymanIcon from '@mui/icons-material/Handyman';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
-
 import $ from 'jquery';
+
 function Header() {
+
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const [isMenuShown, setIsMenuShown] = useState(false);
 
 
 
-  
+
   useEffect(() => {
     const handleScroll = () => {
       if (isMenuShown) {
@@ -27,25 +28,28 @@ function Header() {
         }
       }
     };
-  
+
     const handleClickOutsideMenu = (event) => {
       const menuIcons = document.querySelector('.menu span:last-child');
-  
-      if (menuIcons && !menuIcons.contains(event.target)) {
-        setIsMenuShown(false);
-      }
-    };
-  
+      const menu = document.querySelector('.menu');
+
+      
+  if (menu && !menu.contains(event.target) && !menuIcons.contains(event.target)) {
+    setIsMenuShown(false);
+  }
+};
+
+
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('mousedown', handleClickOutsideMenu);
-  
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('mousedown', handleClickOutsideMenu);
     };
   }, [isMenuShown]);
-  
-  
+
+
 
 
   useEffect(() => {
@@ -64,7 +68,7 @@ function Header() {
   const isActive = (pathname) => {
     return location.pathname === pathname ? 'active' : '';
   };
-  
+
 
   return (
     <div>
@@ -76,25 +80,25 @@ function Header() {
         </div>
 
         <div className="menu lg:hidden">
-          <span className={`fa ${isMenuShown ? 'show' : 'hidden'} ${ isActive('/')} `}>
+          <span className={`fa ${isMenuShown ? 'show' : 'hidden'} ${isActive('/')} `}>
             <Link to="/">
               <HomeIcon />
             </Link>
           </span>
 
-          <span className={`fa ${isMenuShown ? 'show' : 'hidden'} ${ isActive('/about')} `}>
+          <span className={`fa ${isMenuShown ? 'show' : 'hidden'} ${isActive('/about')} `}>
             <Link to="/about">
               <ComputerIcon />
             </Link>
           </span>
 
-          <span className={`fa ${isMenuShown ? 'show' : 'hidden'} ${ isActive('/service')} `}>
+          <span className={`fa ${isMenuShown ? 'show' : 'hidden'} ${isActive('/service')} `}>
             <Link to="/service">
               <HandymanIcon />
             </Link>
           </span>
 
-          <span className={`fa ${isMenuShown ? 'show' : 'hidden'} ${ isActive('/contact')} `}>
+          <span className={`fa ${isMenuShown ? 'show' : 'hidden'} ${isActive('/contact')} `}>
             <Link to="/contact">
               <ContactMailIcon />
             </Link>
